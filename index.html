@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>London Matcha Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="nav">
+  <div class="nav-logo" onclick="navigate('home')">London Matcha Club</div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a onclick="navigate('about')" data-page="about" data-i18n="nav.about">About</a>
+      <a onclick="navigate('journal')" data-page="journal" data-i18n="nav.journal">Journal</a>
+      <a onclick="navigate('shop')" data-page="shop" data-i18n="nav.shop">Shop</a>
+      <a onclick="navigate('visit')" data-page="visit" data-i18n="nav.visit">Visit</a>
+    </div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="ja" onclick="setLanguage('ja')">JP</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ HOME ══════════════════════════════════════════════════════════════ -->
+<div id="page-home" class="page">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="t-label hero-label" data-i18n="home.hero.label">Notting Hill, London</div>
+      <h1 class="hero-title">London<br>Matcha<br>Club</h1>
+      <p class="hero-subtitle" data-i18n="home.hero.subtitle">A matcha bar for those who move slowly on purpose.</p>
+      <span class="btn btn-white" onclick="navigate('shop')" data-i18n="home.hero.cta">View Collection</span>
+    </div>
+  </section>
+
+  <section class="home-intro">
+    <div class="home-intro-inner">
+      <div class="home-intro-img img-ph"></div>
+      <div class="home-intro-text">
+        <div class="t-label" data-i18n="home.intro.label">The people behind LMC</div>
+        <h2 class="t-h1" data-i18n="home.intro.h1">We are Kenji &amp; Clara.</h2>
+        <p class="t-italic" data-i18n="home.intro.italic">A Japanese craftsman and a London designer, sharing a quiet obsession with the way a single bowl of matcha can change the pace of a day.</p>
+        <p class="t-body" data-i18n="home.intro.body">We opened London Matcha Club not to build a brand, but because we couldn't find the place we were looking for. Five years later, we're still brewing slowly, still making the clothes we want to wear, still learning from every bowl.</p>
+        <span class="arrow-link" onclick="navigate('about')" data-i18n="home.intro.link">Read our story</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-journal section-pad">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="t-label" style="margin-bottom:12px" data-i18n="home.journal.label">From the journal</div>
+          <h2 class="t-h2" data-i18n="home.journal.h2">Craft &amp; Observation</h2>
+        </div>
+        <span class="arrow-link" onclick="navigate('journal')" data-i18n="home.journal.link">All entries</span>
+      </div>
+      <div class="grid-3" id="home-journal-grid"></div>
+    </div>
+  </section>
+
+  <section class="home-shop section-pad">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="t-label" style="margin-bottom:12px" data-i18n="home.shop.label">The collection</div>
+          <h2 class="t-h2" data-i18n="home.shop.h2">Wear</h2>
+        </div>
+        <span class="arrow-link" onclick="navigate('shop')" data-i18n="home.shop.link">Full collection</span>
+      </div>
+      <div class="grid-4">
+        <div class="product-card" onclick="navigate('shop')">
+          <div class="product-card-img"><div></div></div>
+          <div class="product-card-name" data-i18n="shop.p1.name">Oversized Tee</div>
+          <div class="product-card-price">£ 85</div>
+        </div>
+        <div class="product-card" onclick="navigate('shop')">
+          <div class="product-card-img"><div></div></div>
+          <div class="product-card-name" data-i18n="shop.p2.name">Wide Linen Pant</div>
+          <div class="product-card-price">£ 195</div>
+        </div>
+        <div class="product-card" onclick="navigate('shop')">
+          <div class="product-card-img"><div></div></div>
+          <div class="product-card-name" data-i18n="shop.p3.name">Band Collar Shirt</div>
+          <div class="product-card-price">£ 145</div>
+        </div>
+        <div class="product-card" onclick="navigate('shop')">
+          <div class="product-card-img"><div></div></div>
+          <div class="product-card-name" data-i18n="shop.p4.name">Canvas Tote</div>
+          <div class="product-card-price">£ 55</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-grid">
+    <div class="home-grid-title">
+      <div class="t-label" data-i18n="home.ig.label">Follow our days</div>
+      <h2 class="t-h2" style="margin-top:12px">@londonmatchaclub</h2>
+    </div>
+    <div class="ig-grid">
+      <div class="ig-cell"><div style="background:linear-gradient(135deg,#3d5c3a,#2a4228)"></div></div>
+      <div class="ig-cell"><div style="background:linear-gradient(135deg,#e0dbd2,#ccc6bc)"></div></div>
+      <div class="ig-cell"><div style="background:linear-gradient(135deg,#b8b2a8,#a0998e)"></div></div>
+      <div class="ig-cell"><div style="background:linear-gradient(135deg,#f0ede7,#e0dcd4)"></div></div>
+      <div class="ig-cell"><div style="background:linear-gradient(135deg,#4a6b3a,#3a5530)"></div></div>
+      <div class="ig-cell"><div style="background:linear-gradient(135deg,#d4cec6,#c0b9b0)"></div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ ABOUT ══════════════════════════════════════════════════════════════ -->
+<div id="page-about" class="page" style="display:none">
+  <section class="about-hero">
+    <div class="about-hero-inner">
+      <div class="t-label" style="color:rgba(255,255,255,0.4)" data-i18n="about.hero.label">About</div>
+      <h1 class="t-display" style="color:white;max-width:700px;margin-top:28px" data-i18n="about.hero.display">Two people,<br><em>one obsession.</em></h1>
+    </div>
+  </section>
+
+  <section class="about-story">
+    <div class="about-story-inner">
+      <div class="about-portrait img-ph"></div>
+      <div class="about-text">
+        <div class="t-label" data-i18n="about.story.label">Our story</div>
+        <h2 class="t-h2" style="margin-top:16px;margin-bottom:32px" data-i18n="about.story.h2">We met in East London, over bad coffee and a conversation that lasted four hours.</h2>
+        <p class="t-italic" data-i18n="about.story.quote">"Kenji said he could make something better than what we were drinking. He was right." — Clara</p>
+        <p class="t-body" data-i18n="about.story.body1">Kenji grew up in Kyoto, where tea is not a beverage but a practice. After fifteen years in London working as a graphic designer, he found himself increasingly drawn back to the rituals of his upbringing — the quiet, the slowness, the way a single bowl could reframe an entire morning.</p>
+        <p class="t-body" data-i18n="about.story.body2">Clara, born and raised in Hackney, had spent her career designing interiors that felt like exhales. When the two of them began talking about opening a space together, they were describing the same place without knowing it.</p>
+        <p class="t-body" data-i18n="about.story.body3">London Matcha Club opened quietly, with no announcement and a handwritten sign. That was five years ago. The bonsai in the window has been there since day one.</p>
+        <div style="margin-top:40px">
+          <span class="arrow-link" onclick="navigate('visit')" data-i18n="about.story.link">Come and visit us</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-philosophy">
+    <div class="about-philosophy-inner">
+      <div class="t-label" data-i18n="about.phil.label">Our philosophy</div>
+      <h2 class="t-h1" style="margin-top:24px;margin-bottom:40px" data-i18n="about.phil.h1">Calm is not an aesthetic.<br>It's a decision.</h2>
+      <p class="t-italic" data-i18n="about.phil.italic">Everything we do — the matcha we source, the clothes we make, the way we arrange the room — comes from the same impulse: to make space for the unhurried. We're not minimalists out of taste. We're minimalists out of necessity.</p>
+      <div class="about-grid">
+        <div class="about-grid-cell">
+          <div class="t-label" data-i18n="about.g1.label">Sourcing</div>
+          <h3 class="t-h3" data-i18n="about.g1.h3">Direct from producers</h3>
+          <p class="t-body" data-i18n="about.g1.body">Every matcha we serve comes from farms we have visited personally. We don't use distributors. We don't compromise on shade time.</p>
+        </div>
+        <div class="about-grid-cell">
+          <div class="t-label" data-i18n="about.g2.label">Making</div>
+          <h3 class="t-h3" data-i18n="about.g2.h3">Natural fibres only</h3>
+          <p class="t-body" data-i18n="about.g2.body">The LMC clothing line uses organic cotton and linen, produced in small batches in Portugal and Japan. Nothing synthetic. Nothing wasteful.</p>
+        </div>
+        <div class="about-grid-cell">
+          <div class="t-label" data-i18n="about.g3.label">Presence</div>
+          <h3 class="t-h3" data-i18n="about.g3.h3">A real place, online</h3>
+          <p class="t-body" data-i18n="about.g3.body">We wanted LMC to feel as tangible on a screen as it does in the room. The same light, the same pace, the same sense of something unhurried.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ JOURNAL (list) ════════════════════════════════════════════════════ -->
+<div id="page-journal" class="page" style="display:none">
+  <section class="journal-hero">
+    <div class="journal-hero-inner">
+      <div class="t-label" data-i18n="journal.hero.label">Journal</div>
+      <h1 class="t-display" style="margin-top:28px" data-i18n="journal.hero.display">Notes on<br>craft &amp; living.</h1>
+    </div>
+  </section>
+
+  <section class="journal-list">
+    <div class="journal-list-inner">
+      <div id="journal-featured"></div>
+      <div class="journal-grid" id="journal-grid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ ARTICLE (single entry, rendered dynamically) ══════════════════════ -->
+<div id="page-article" class="page" style="display:none">
+  <section class="article-hero">
+    <div class="article-hero-inner">
+      <div class="t-label" id="article-date"></div>
+      <h1 class="t-display" style="margin-top:28px;font-size:clamp(2.2rem,5vw,3.5rem)" id="article-title"></h1>
+    </div>
+  </section>
+  <section class="article-body-section">
+    <div class="article-body-inner">
+      <div class="article-cover"><div id="article-cover-img"></div></div>
+      <div class="article-content" id="article-content"></div>
+      <div class="article-back">
+        <span class="arrow-link" onclick="navigate('journal')" data-i18n="journal.back">Back to Journal</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ SHOP ═══════════════════════════════════════════════════════════════ -->
+<div id="page-shop" class="page" style="display:none">
+  <section class="shop-hero">
+    <div class="shop-hero-inner">
+      <div>
+        <div class="t-label" data-i18n="shop.hero.label">The collection</div>
+        <h1 class="t-display" style="margin-top:24px" data-i18n="shop.hero.display">Wear.</h1>
+      </div>
+      <div class="shop-hero-text">
+        <p class="t-italic" data-i18n="shop.hero.italic">Clothes for people who don't think about their clothes. Made from natural fibres, cut for stillness, designed to last longer than a season.</p>
+        <p class="t-body" style="margin-top:20px;font-size:0.82rem" data-i18n="shop.hero.delivery">Free delivery in the UK on orders over £150. Returns within 30 days.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="shop-intro">
+    <div class="shop-filter">
+      <span class="active" data-i18n="shop.filter.all">All</span>
+      <span data-i18n="shop.filter.tops">Tops</span>
+      <span data-i18n="shop.filter.bottoms">Bottoms</span>
+      <span data-i18n="shop.filter.acc">Accessories</span>
+    </div>
+  </div>
+
+  <section class="shop-grid-section">
+    <div class="shop-grid">
+      <div class="shop-product">
+        <div class="shop-product-img"><div></div></div>
+        <div class="shop-product-label">
+          <span class="shop-product-name" data-i18n="shop.p1.name">Oversized Tee</span>
+          <span class="shop-product-price">£ 85</span>
+        </div>
+        <div class="shop-product-sub" data-i18n="shop.p1.sub">Organic cotton · Unisex · Off-white / Black</div>
+        <button class="add-to-cart" data-i18n="shop.add" onclick="alert(window._t('shop.alert'))">Add to bag</button>
+      </div>
+      <div class="shop-product">
+        <div class="shop-product-img"><div></div></div>
+        <div class="shop-product-label">
+          <span class="shop-product-name" data-i18n="shop.p2.name">Wide Linen Pant</span>
+          <span class="shop-product-price">£ 195</span>
+        </div>
+        <div class="shop-product-sub" data-i18n="shop.p2.sub">Linen 100% · Unisex · Black / Stone</div>
+        <button class="add-to-cart" data-i18n="shop.add" onclick="alert(window._t('shop.alert'))">Add to bag</button>
+      </div>
+      <div class="shop-product">
+        <div class="shop-product-img"><div></div></div>
+        <div class="shop-product-label">
+          <span class="shop-product-name" data-i18n="shop.p3.name">Band Collar Shirt</span>
+          <span class="shop-product-price">£ 145</span>
+        </div>
+        <div class="shop-product-sub" data-i18n="shop.p3.sub">Linen–cotton blend · Unisex · Cream / White</div>
+        <button class="add-to-cart" data-i18n="shop.add" onclick="alert(window._t('shop.alert'))">Add to bag</button>
+      </div>
+      <div class="shop-product">
+        <div class="shop-product-img"><div></div></div>
+        <div class="shop-product-label">
+          <span class="shop-product-name" data-i18n="shop.p4.name">Canvas Tote</span>
+          <span class="shop-product-price">£ 55</span>
+        </div>
+        <div class="shop-product-sub" data-i18n="shop.p4.sub">Organic canvas · Natural / Forest</div>
+        <button class="add-to-cart" data-i18n="shop.add" onclick="alert(window._t('shop.alert'))">Add to bag</button>
+      </div>
+      <div class="shop-product">
+        <div class="shop-product-img"><div></div></div>
+        <div class="shop-product-label">
+          <span class="shop-product-name" data-i18n="shop.p5.name">Linen Apron</span>
+          <span class="shop-product-price">£ 75</span>
+        </div>
+        <div class="shop-product-sub" data-i18n="shop.p5.sub">Linen 100% · Natural / Forest</div>
+        <button class="add-to-cart" data-i18n="shop.add" onclick="alert(window._t('shop.alert'))">Add to bag</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop-philosophy">
+    <div class="shop-philosophy-inner">
+      <div class="t-label" data-i18n="shop.phil.label">Why we make things</div>
+      <h2 class="t-h1" data-i18n="shop.phil.h1">We make what we couldn't find.</h2>
+      <p class="t-italic" style="margin-top:28px" data-i18n="shop.phil.italic">Clothes that don't announce themselves. That wear well, wash well, and get better over time. Nothing synthetic, nothing seasonal, nothing made twice.</p>
+      <div style="margin-top:48px">
+        <span class="arrow-link" style="color:rgba(255,255,255,0.7);justify-content:center" onclick="navigate('about')" data-i18n="shop.phil.link">About the brand</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ VISIT ══════════════════════════════════════════════════════════════ -->
+<div id="page-visit" class="page" style="display:none">
+  <section class="visit-hero">
+    <div class="visit-hero-inner">
+      <div class="t-label" style="color:rgba(255,255,255,0.4)" data-i18n="visit.hero.label">Visit</div>
+      <h1 class="t-display" style="margin-top:28px;color:white;max-width:600px" data-i18n="visit.hero.display">Find us on a quiet street in Notting Hill.</h1>
+    </div>
+  </section>
+
+  <section class="visit-main">
+    <div class="visit-main-inner">
+      <div class="visit-map">
+        <div class="visit-map-placeholder">
+          <div class="t-label" data-i18n="visit.map.label">Map</div>
+          <p style="margin-top:8px">12 Elgin Crescent<br>Notting Hill, London W11 2JJ</p>
+          <p style="margin-top:16px;font-size:0.75rem;color:var(--lgray)" data-i18n="visit.map.note">[ Replace with Google Maps embed ]</p>
+        </div>
+      </div>
+      <div class="visit-info">
+        <div class="t-label" data-i18n="visit.info.label">Plan your visit</div>
+        <div class="visit-block" style="margin-top:32px">
+          <h3 data-i18n="visit.addr.h3">Address</h3>
+          <p>12 Elgin Crescent</p>
+          <p>Notting Hill, London</p>
+          <p>W11 2JJ</p>
+        </div>
+        <div class="visit-block">
+          <h3 data-i18n="visit.hours.h3">Opening hours</h3>
+          <div class="visit-hours">
+            <span class="day" data-i18n="visit.h.wed">Wednesday</span><span>8:00 — 17:00</span>
+            <span class="day" data-i18n="visit.h.thu">Thursday</span><span>8:00 — 17:00</span>
+            <span class="day" data-i18n="visit.h.fri">Friday</span><span>8:00 — 17:00</span>
+            <span class="day" data-i18n="visit.h.sat">Saturday</span><span>8:00 — 18:00</span>
+            <span class="day" data-i18n="visit.h.sun">Sunday</span><span>9:00 — 16:00</span>
+            <span class="day" data-i18n="visit.h.closed">Mon – Tue</span><span style="color:var(--gray)" data-i18n="visit.h.closedval">Closed</span>
+          </div>
+        </div>
+        <div class="visit-block">
+          <h3 data-i18n="visit.getting.h3">Getting here</h3>
+          <p data-i18n="visit.getting.p1">Nearest tube: Notting Hill Gate (District, Circle, Central lines)</p>
+          <p style="margin-top:6px" data-i18n="visit.getting.p2">Five minutes on foot through Pembridge Road.</p>
+        </div>
+        <div class="visit-block">
+          <h3 data-i18n="visit.contact.h3">Contact</h3>
+          <a href="mailto:hello@londonmatchaclub.com">hello@londonmatchaclub.com</a>
+          <a href="https://instagram.com/londonmatchaclub" target="_blank">@londonmatchaclub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="visit-image-row">
+    <div class="visit-image-cell"><div class="img-ph" style="height:100%;background:linear-gradient(135deg,#30442f,#4a6b3a)"></div></div>
+    <div class="visit-image-cell"><div class="img-ph" style="height:100%;background:linear-gradient(135deg,#e8e4dd,#d5d0c8)"></div></div>
+    <div class="visit-image-cell"><div class="img-ph" style="height:100%;background:linear-gradient(135deg,#c8c2b5,#b0aa9e)"></div></div>
+  </div>
+
+  <section class="visit-note">
+    <div class="visit-note-inner">
+      <div class="t-label" data-i18n="visit.note.label">A note</div>
+      <p class="t-italic" style="margin-top:24px" data-i18n="visit.note.italic">"We don't take reservations, and we don't hurry anyone out. Come when you can stay a while."</p>
+      <p style="margin-top:20px;font-size:0.8rem;color:var(--gray);font-weight:300" data-i18n="visit.note.sig">— Kenji &amp; Clara</p>
+    </div>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">London Matcha Club</div>
+      <p class="footer-tagline" data-i18n="footer.tagline">A matcha bar for those who move slowly on purpose.<br>Notting Hill, London.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.pages.h">Pages</h4>
+      <a onclick="navigate('home')" data-i18n="footer.pages.home">Home</a>
+      <a onclick="navigate('about')" data-i18n="nav.about">About</a>
+      <a onclick="navigate('journal')" data-i18n="nav.journal">Journal</a>
+      <a onclick="navigate('shop')" data-i18n="nav.shop">Shop</a>
+      <a onclick="navigate('visit')" data-i18n="nav.visit">Visit</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.shop.h">Shop</h4>
+      <a onclick="navigate('shop')" data-i18n="footer.shop.col">Collection</a>
+      <a onclick="navigate('shop')" data-i18n="shop.p1.name">Oversized Tee</a>
+      <a onclick="navigate('shop')" data-i18n="shop.p2.name">Wide Linen Pant</a>
+      <a onclick="navigate('shop')" data-i18n="shop.p5.name">Linen Apron</a>
+      <a onclick="navigate('shop')" data-i18n="shop.p4.name">Canvas Tote</a>
+    </div>
+    <div class="footer-col">
+      <h4 data-i18n="footer.connect.h">Connect</h4>
+      <a href="https://instagram.com/londonmatchaclub" target="_blank">Instagram</a>
+      <a href="mailto:hello@londonmatchaclub.com" data-i18n="footer.connect.email">Email us</a>
+      <a onclick="navigate('journal')" data-i18n="nav.journal">Journal</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span data-i18n="footer.copy">© 2025 London Matcha Club</span>
+    <span data-i18n="footer.made">Made slowly in London</span>
+  </div>
+</footer>
+
+<script src="js/articles.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
