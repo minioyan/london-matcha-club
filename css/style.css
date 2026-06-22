@@ -22,6 +22,10 @@ a{color:inherit;text-decoration:none}
 .lang-ja .add-to-cart,.lang-ja .arrow-link,.lang-ja .shop-filter span,.lang-ja footer p,
 .lang-ja .visit-hours,.lang-ja .footer-col a,.lang-ja .footer-bottom{font-family:var(--sans-ja);font-weight:300}
 .lang-ja .t-label{letter-spacing:0.08em}
+/* Japanese glyphs run wider per-character than Latin at the same size, so long
+   headlines need a smaller scale and a wider box to avoid near-vertical wrapping. */
+.lang-ja .t-display{font-size:clamp(2.1rem,6vw,5.5rem)}
+.lang-ja .hero-display-narrow{max-width:760px}
 
 /* ── Typography ─────────────────────────────────────────────────────── */
 .t-display{font-family:var(--serif);font-weight:300;font-size:clamp(3rem,8vw,7rem);line-height:1.0;letter-spacing:-0.02em}
@@ -94,7 +98,6 @@ footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48p
 .hero{position:relative;height:100vh;display:flex;align-items:flex-end;padding-bottom:80px;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,#1a2e1a 0%,var(--green) 55%,#3d5c3a 100%) center/cover no-repeat}
 .hero-bg::after{content:'';position:absolute;inset:0;background:
-  linear-gradient(160deg,rgba(26,46,26,0.78) 0%,rgba(48,68,47,0.62) 45%,rgba(61,92,58,0.5) 100%),
   linear-gradient(to top,rgba(0,0,0,0.55) 0%,transparent 55%),
   linear-gradient(to bottom,rgba(0,0,0,0.45) 0%,transparent 22%)}
 .hero-content{position:relative;z-index:2;padding:0 48px;max-width:900px}
@@ -104,7 +107,7 @@ footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48p
 .lang-ja .hero-subtitle{font-style:normal;font-family:var(--serif-ja)}
 .home-intro{background:var(--white)}
 .home-intro-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto;padding:120px 48px}
-.home-intro-img{aspect-ratio:3/4;background:linear-gradient(135deg,#d4cec6 0%,#b8b2a8 100%);background-size:cover;background-position:center;position:relative}
+.home-intro-img{aspect-ratio:3/4;background:linear-gradient(135deg,#d4cec6 0%,#b8b2a8 100%);background-size:cover;background-position:center;position:relative;min-width:0}
 .home-intro-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.45) 0%,transparent 35%)}
 .home-intro-img::before{content:'Kenji & Clara';position:absolute;z-index:1;bottom:24px;left:24px;font-family:var(--serif);font-style:italic;font-size:0.85rem;color:rgba(255,255,255,0.9)}
 .home-intro-text .t-label{margin-bottom:28px}
@@ -140,7 +143,7 @@ footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48p
 .about-hero-inner{max-width:1200px;margin:0 auto}
 .about-story{background:var(--white)}
 .about-story-inner{max-width:1200px;margin:0 auto;padding:120px 48px;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
-.about-portrait{aspect-ratio:3/4;background:linear-gradient(150deg,#ccc7be 0%,#b8b2a7 100%)}
+.about-portrait{aspect-ratio:3/4;background:linear-gradient(150deg,#ccc7be 0%,#b8b2a7 100%);min-width:0}
 .about-text .t-label{margin-bottom:28px}
 .about-text .t-h2{margin-bottom:32px}
 .about-text .t-italic{margin-bottom:24px;border-left:2px solid var(--green);padding-left:24px}
@@ -161,6 +164,7 @@ footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48p
 .journal-list{background:var(--white)}
 .journal-list-inner{max-width:1200px;margin:0 auto;padding:80px 48px}
 .journal-featured{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;padding-bottom:80px;margin-bottom:80px;border-bottom:1px solid var(--lgray);cursor:pointer}
+.journal-featured > *{min-width:0}
 .journal-featured-img{aspect-ratio:4/3;overflow:hidden}
 .journal-featured-img div{width:100%;height:100%;transition:transform 0.5s}
 .journal-featured:hover .journal-featured-img div{transform:scale(1.04)}
@@ -212,9 +216,10 @@ footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48p
 /* ══ VISIT ═══════════════════════════════════════════════════════════════ */
 .visit-hero{background:var(--green-dark);padding:140px 48px 80px}
 .visit-hero-inner{max-width:1200px;margin:0 auto}
+.hero-display-narrow{max-width:600px}
 .visit-main{background:var(--white)}
 .visit-main-inner{max-width:1200px;margin:0 auto;padding:100px 48px;display:grid;grid-template-columns:1fr 1fr;gap:100px}
-.visit-map{aspect-ratio:4/3;background:linear-gradient(135deg,#e8e4dd 0%,#d5d0c8 100%);display:flex;align-items:center;justify-content:center;border:1px solid var(--lgray)}
+.visit-map{aspect-ratio:4/3;background:linear-gradient(135deg,#e8e4dd 0%,#d5d0c8 100%);display:flex;align-items:center;justify-content:center;border:1px solid var(--lgray);min-width:0}
 .visit-map-placeholder{text-align:center}
 .visit-map-placeholder .t-label{margin-bottom:12px}
 .visit-map-placeholder p{font-size:0.85rem;color:var(--gray);font-weight:300}

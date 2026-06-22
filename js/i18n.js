@@ -187,7 +187,7 @@ const i18n = {
     'shop.phil.link': 'ブランドについて',
 
     'visit.hero.label': 'アクセス',
-    'visit.hero.display': 'ノッティング・ヒルの<br>静かな通りにあります。',
+    'visit.hero.display': 'ノッティング・ヒルの<br>静かな一角に。',
     'visit.map.label': '地図',
     'visit.map.note': '[ Google マップを埋め込む ]',
     'visit.info.label': 'ご来店の計画',
