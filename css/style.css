@@ -97,8 +97,9 @@ footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48p
 .lang-ja .hero-subtitle{font-style:normal;font-family:var(--serif-ja)}
 .home-intro{background:var(--white)}
 .home-intro-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto;padding:120px 48px}
-.home-intro-img{aspect-ratio:3/4;background:linear-gradient(135deg,#d4cec6 0%,#b8b2a8 100%);position:relative}
-.home-intro-img::before{content:'Kenji & Clara';position:absolute;bottom:24px;left:24px;font-family:var(--serif);font-style:italic;font-size:0.85rem;color:rgba(255,255,255,0.8)}
+.home-intro-img{aspect-ratio:3/4;background:linear-gradient(135deg,#d4cec6 0%,#b8b2a8 100%);background-size:cover;background-position:center;position:relative}
+.home-intro-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.45) 0%,transparent 35%)}
+.home-intro-img::before{content:'Kenji & Clara';position:absolute;z-index:1;bottom:24px;left:24px;font-family:var(--serif);font-style:italic;font-size:0.85rem;color:rgba(255,255,255,0.9)}
 .home-intro-text .t-label{margin-bottom:28px}
 .home-intro-text .t-h1{margin-bottom:28px}
 .home-intro-text .t-italic{margin-bottom:40px}
