@@ -5,14 +5,17 @@ window._t = (key) => (i18n[currentLang] && i18n[currentLang][key]) || (i18n.en[k
 
 function bg(el, gradientOrUrl) {
   if (!gradientOrUrl) return;
-  const isUrl = /^https?:\/\//.test(gradientOrUrl) || gradientOrUrl.startsWith('url(');
-  el.style.background = isUrl
-    ? `url('${gradientOrUrl}') center/cover no-repeat`
-    : gradientOrUrl;
+  const isGradient = gradientOrUrl.startsWith('linear-gradient(') || gradientOrUrl.startsWith('url(');
+  el.style.background = isGradient
+    ? gradientOrUrl
+    : `url('${gradientOrUrl}') center/cover no-repeat`;
 }
 
+// Returns a ready-to-use CSS `background` value — a gradient string as-is,
+// or a photo path wrapped in url(...) with cover/center sizing.
 function articleImage(article) {
-  return article.image || article.gradient;
+  if (article.image) return `url('${article.image}') center/cover no-repeat`;
+  return article.gradient;
 }
 
 // ── Journal rendering (data-driven from ARTICLES) ──────────────────────────

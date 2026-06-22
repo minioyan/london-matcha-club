@@ -22,6 +22,7 @@ const ARTICLES = [
     slug: 'first-bowl-sets-the-day',
     date: { en: 'June 2025', ja: '2025年6月' },
     gradient: 'linear-gradient(135deg,#3d5c3a,#5a7a55)',
+    image: 'assets/journal/first-bowl.jpg',
     title: {
       en: 'On moving slowly — and why the first bowl sets the day',
       ja: 'ゆっくりと動くことについて — なぜ最初の一杯が1日を決めるのか',
@@ -43,6 +44,7 @@ const ARTICLES = [
     slug: 'uji-nishio-yame-matcha-regions',
     date: { en: 'May 2025', ja: '2025年5月' },
     gradient: 'linear-gradient(135deg,#c8c2b5,#a8a298)',
+    image: 'assets/journal/uji-nishio-yame.jpg',
     title: {
       en: "Uji, Nishio, Yame — a guide to Japan's matcha regions",
       ja: '宇治、西尾、八女 — 日本の抹茶産地ガイド',
@@ -64,6 +66,7 @@ const ARTICLES = [
     slug: 'making-our-own-clothes',
     date: { en: 'April 2025', ja: '2025年4月' },
     gradient: 'linear-gradient(135deg,#e0dbd2,#ccc6bc)',
+    image: 'assets/journal/making-clothes.jpg',
     title: {
       en: 'What we wear and why we started making it ourselves',
       ja: 'なぜ私たちは自分たちで服を作り始めたのか',
@@ -85,6 +88,7 @@ const ARTICLES = [
     slug: 'bonsai-in-our-window',
     date: { en: 'March 2025', ja: '2025年3月' },
     gradient: 'linear-gradient(135deg,#d4cec6,#b8b2a8)',
+    image: 'assets/journal/bonsai.jpg',
     title: {
       en: 'The bonsai in our window — and what it has taught us about patience',
       ja: '窓の盆栽と、忍耐について教えてくれたもの',
@@ -104,6 +108,7 @@ const ARTICLES = [
     slug: 'shade-time-21-days',
     date: { en: 'February 2025', ja: '2025年2月' },
     gradient: 'linear-gradient(135deg,#4a6b3a,#3a5530)',
+    image: 'assets/journal/shade-time.jpg',
     title: {
       en: 'Shade time — why 21 days under cover makes a matcha exceptional',
       ja: '被覆期間 — なぜ21日間の遮光が抹茶を特別にするのか',
@@ -123,6 +128,7 @@ const ARTICLES = [
     slug: 'linen-in-winter',
     date: { en: 'January 2025', ja: '2025年1月' },
     gradient: 'linear-gradient(135deg,#f0ede7,#ddd8ce)',
+    image: 'assets/journal/linen-winter.jpg',
     title: {
       en: 'Linen in winter — why we wear the same things all year',
       ja: '冬のリネン — なぜ私たちは1年中同じものを着るのか',
@@ -142,6 +148,7 @@ const ARTICLES = [
     slug: 'notting-hill-morning-routine',
     date: { en: 'December 2024', ja: '2024年12月' },
     gradient: 'linear-gradient(135deg,#b5b0a6,#9a9590)',
+    image: 'assets/journal/notting-hill.jpg',
     title: {
       en: "A Notting Hill morning — Kenji's routine before we open",
       ja: 'ノッティング・ヒルの朝 — 開店前の健二のルーティン',
