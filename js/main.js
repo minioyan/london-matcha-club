@@ -72,8 +72,24 @@ function renderArticle(slug) {
   currentArticleSlug = slug;
   document.getElementById('article-date').textContent = article.date[currentLang] || article.date.en;
   document.getElementById('article-title').innerHTML = article.title[currentLang] || article.title.en;
-  document.getElementById('article-content').innerHTML = article.body[currentLang] || article.body.en;
+  const content = document.getElementById('article-content');
+  content.innerHTML = article.body[currentLang] || article.body.en;
   bg(document.getElementById('article-cover-img'), articleImage(article));
+  insertInlineImage(content, article);
+}
+
+// Drops one inline image roughly midway through the body so long articles
+// get a visual break — reuses the article's own gradient/photo.
+function insertInlineImage(content, article) {
+  const paragraphs = content.querySelectorAll('p');
+  if (paragraphs.length < 2) return;
+  const target = paragraphs[Math.floor(paragraphs.length / 2) - 1];
+  const wrapper = document.createElement('div');
+  wrapper.className = 'article-inline-img';
+  const inner = document.createElement('div');
+  wrapper.appendChild(inner);
+  bg(inner, articleImage(article));
+  target.after(wrapper);
 }
 
 function setLanguage(lang) {
