@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=6">
+<link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
 
@@ -78,7 +78,10 @@
       <div class="section-header">
         <div>
           <div class="t-label" style="margin-bottom:12px" data-i18n="home.shop.label">The collection</div>
-          <h2 class="t-h2" data-i18n="home.shop.h2">Wear</h2>
+          <h2 class="t-h2">
+            <span data-i18n="home.shop.h2">Wear</span>
+            <span class="coming-soon-badge" data-i18n="shop.comingsoon">Coming Soon</span>
+          </h2>
         </div>
         <span class="arrow-link" onclick="navigate('shop')" data-i18n="home.shop.link">Full collection</span>
       </div>
@@ -110,7 +113,7 @@
   <section class="home-grid">
     <div class="home-grid-title">
       <div class="t-label" data-i18n="home.ig.label">Follow our days</div>
-      <h2 class="t-h2" style="margin-top:12px">@londonmatchaclub</h2>
+      <h2 class="t-h2" style="margin-top:12px">@london_matcha_club</h2>
     </div>
     <div class="ig-grid">
       <div class="ig-cell"><div style="background:linear-gradient(135deg,#3d5c3a,#2a4228)"></div></div>
@@ -217,7 +220,10 @@
     <div class="shop-hero-inner">
       <div>
         <div class="t-label" data-i18n="shop.hero.label">The collection</div>
-        <h1 class="t-display" style="margin-top:24px" data-i18n="shop.hero.display">Wear.</h1>
+        <h1 class="t-display" style="margin-top:24px">
+          <span data-i18n="shop.hero.display">Wear.</span>
+          <span class="coming-soon-badge" data-i18n="shop.comingsoon">Coming Soon</span>
+        </h1>
       </div>
       <div class="shop-hero-text">
         <p class="t-italic" data-i18n="shop.hero.italic">Clothes for people who don't think about their clothes. Made from natural fibres, cut for stillness, designed to last longer than a season.</p>
@@ -244,7 +250,7 @@
           <span class="shop-product-price">£ 85</span>
         </div>
         <div class="shop-product-sub" data-i18n="shop.p1.sub">Organic cotton · Unisex · Off-white / Black</div>
-        <button class="add-to-cart" data-i18n="shop.add" onclick="alert(window._t('shop.alert'))">Add to bag</button>
+        <button class="add-to-cart" data-i18n="shop.add" disabled>Coming Soon</button>
       </div>
       <div class="shop-product">
         <div class="shop-product-img"><div></div></div>
@@ -253,7 +259,7 @@
           <span class="shop-product-price">£ 195</span>
         </div>
         <div class="shop-product-sub" data-i18n="shop.p2.sub">Linen 100% · Unisex · Black / Stone</div>
-        <button class="add-to-cart" data-i18n="shop.add" onclick="alert(window._t('shop.alert'))">Add to bag</button>
+        <button class="add-to-cart" data-i18n="shop.add" disabled>Coming Soon</button>
       </div>
       <div class="shop-product">
         <div class="shop-product-img"><div></div></div>
@@ -262,7 +268,7 @@
           <span class="shop-product-price">£ 145</span>
         </div>
         <div class="shop-product-sub" data-i18n="shop.p3.sub">Linen–cotton blend · Unisex · Cream / White</div>
-        <button class="add-to-cart" data-i18n="shop.add" onclick="alert(window._t('shop.alert'))">Add to bag</button>
+        <button class="add-to-cart" data-i18n="shop.add" disabled>Coming Soon</button>
       </div>
       <div class="shop-product">
         <div class="shop-product-img"><div></div></div>
@@ -271,7 +277,7 @@
           <span class="shop-product-price">£ 55</span>
         </div>
         <div class="shop-product-sub" data-i18n="shop.p4.sub">Organic canvas · Natural / Forest</div>
-        <button class="add-to-cart" data-i18n="shop.add" onclick="alert(window._t('shop.alert'))">Add to bag</button>
+        <button class="add-to-cart" data-i18n="shop.add" disabled>Coming Soon</button>
       </div>
       <div class="shop-product">
         <div class="shop-product-img"><div></div></div>
@@ -280,7 +286,7 @@
           <span class="shop-product-price">£ 75</span>
         </div>
         <div class="shop-product-sub" data-i18n="shop.p5.sub">Linen 100% · Natural / Forest</div>
-        <button class="add-to-cart" data-i18n="shop.add" onclick="alert(window._t('shop.alert'))">Add to bag</button>
+        <button class="add-to-cart" data-i18n="shop.add" disabled>Coming Soon</button>
       </div>
     </div>
   </section>
@@ -342,7 +348,7 @@
         <div class="visit-block">
           <h3 data-i18n="visit.contact.h3">Contact</h3>
           <a href="mailto:hello@londonmatchaclub.com">hello@londonmatchaclub.com</a>
-          <a href="https://instagram.com/londonmatchaclub" target="_blank">@londonmatchaclub</a>
+          <a href="https://www.instagram.com/london_matcha_club?igsh=MXBzOGJweDhlbWs4Ng==" target="_blank">@london_matcha_club</a>
         </div>
       </div>
     </div>
@@ -388,7 +394,7 @@
     </div>
     <div class="footer-col">
       <h4 data-i18n="footer.connect.h">Connect</h4>
-      <a href="https://instagram.com/londonmatchaclub" target="_blank">Instagram</a>
+      <a href="https://www.instagram.com/london_matcha_club?igsh=MXBzOGJweDhlbWs4Ng==" target="_blank">Instagram</a>
       <a href="mailto:hello@londonmatchaclub.com" data-i18n="footer.connect.email">Email us</a>
       <a onclick="navigate('journal')" data-i18n="nav.journal">Journal</a>
     </div>
@@ -400,7 +406,7 @@
 </footer>
 
 <script src="js/articles.js?v=5"></script>
-<script src="js/i18n.js?v=4"></script>
+<script src="js/i18n.js?v=5"></script>
 <script src="js/main.js?v=5"></script>
 
 </body>
