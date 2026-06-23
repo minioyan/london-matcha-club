@@ -119,7 +119,7 @@ function setLanguage(lang) {
 }
 
 // ── Router ───────────────────────────────────────────────────────────────
-const pages = ['home', 'about', 'journal', 'article', 'shop', 'visit'];
+const pages = ['home', 'about', 'menu', 'journal', 'article', 'shop', 'visit'];
 
 function parseRoute(route) {
   const [page, ...rest] = route.split('/');

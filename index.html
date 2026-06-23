@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=8">
+<link rel="stylesheet" href="css/style.css?v=9">
 </head>
 <body>
 
@@ -23,6 +23,7 @@
   <div class="nav-right">
     <div class="nav-links">
       <a onclick="navigate('about')" data-page="about" data-i18n="nav.about">About</a>
+      <a onclick="navigate('menu')" data-page="menu" data-i18n="nav.menu">Menu</a>
       <a onclick="navigate('journal')" data-page="journal" data-i18n="nav.journal">Journal</a>
       <a onclick="navigate('shop')" data-page="shop" data-i18n="nav.shop">Shop</a>
       <a onclick="navigate('visit')" data-page="visit" data-i18n="nav.visit">Visit</a>
@@ -136,6 +137,82 @@
           <p class="t-body" data-i18n="about.g3.body">We wanted LMC to feel as tangible on a screen as it does in the room. The same light, the same pace, the same sense of something unhurried.</p>
         </div>
       </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ MENU ═══════════════════════════════════════════════════════════════ -->
+<div id="page-menu" class="page" style="display:none">
+  <section class="menu-hero">
+    <div class="menu-hero-inner">
+      <div class="t-label" data-i18n="menu.hero.label">Menu</div>
+      <h1 class="t-display" style="margin-top:28px" data-i18n="menu.hero.display">What we<br>pour &amp; serve.</h1>
+      <p class="t-italic" style="margin-top:28px;max-width:560px" data-i18n="menu.hero.italic">Everything is whisked, steeped, or baked to order. Please allow a few extra minutes — that's rather the point.</p>
+    </div>
+  </section>
+
+  <section class="menu-body">
+    <div class="menu-body-inner">
+
+      <div class="menu-category">
+        <div class="t-label menu-category-label" data-i18n="menu.cat.matcha">Matcha</div>
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="menu-item-row"><span class="menu-item-name" data-i18n="menu.usucha.name">Usucha — thin tea</span><span class="menu-item-price">£ 6.5</span></div>
+            <p class="menu-item-desc" data-i18n="menu.usucha.desc">Whisked to order, ceremonial grade. Light, frothy, a little bitter — the everyday bowl.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-row"><span class="menu-item-name" data-i18n="menu.koicha.name">Koicha — thick tea</span><span class="menu-item-price">£ 8.5</span></div>
+            <p class="menu-item-desc" data-i18n="menu.koicha.desc">Double the matcha, almost no water. Dense, sweet, made for sitting still.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-row"><span class="menu-item-name" data-i18n="menu.iced.name">Iced Matcha</span><span class="menu-item-price">£ 6.5</span></div>
+            <p class="menu-item-desc" data-i18n="menu.iced.desc">Whisked cold over ice. No syrup — we'd rather you taste the leaf.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-row"><span class="menu-item-name" data-i18n="menu.latte.name">Matcha Latte</span><span class="menu-item-price">£ 7</span></div>
+            <p class="menu-item-desc" data-i18n="menu.latte.desc">Oat milk by default. Hot or iced. Lightly sweetened with raw honey.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <div class="t-label menu-category-label" data-i18n="menu.cat.other">Also pouring</div>
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="menu-item-row"><span class="menu-item-name" data-i18n="menu.hojicha.name">Hojicha Latte</span><span class="menu-item-price">£ 6.5</span></div>
+            <p class="menu-item-desc" data-i18n="menu.hojicha.desc">Roasted green tea, low caffeine, deep and a little smoky.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-row"><span class="menu-item-name" data-i18n="menu.genmaicha.name">Genmaicha</span><span class="menu-item-price">£ 5.5</span></div>
+            <p class="menu-item-desc" data-i18n="menu.genmaicha.desc">Green tea with roasted brown rice. Toasty, savoury, no caffeine crash.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <div class="t-label menu-category-label" data-i18n="menu.cat.eat">To eat</div>
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="menu-item-row"><span class="menu-item-name" data-i18n="menu.financier.name">Matcha Financier</span><span class="menu-item-price">£ 4.5</span></div>
+            <p class="menu-item-desc" data-i18n="menu.financier.desc">Brown butter, almond, baked daily in small batches.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-row"><span class="menu-item-name" data-i18n="menu.dorayaki.name">Dorayaki</span><span class="menu-item-price">£ 4.5</span></div>
+            <p class="menu-item-desc" data-i18n="menu.dorayaki.desc">Two pancakes, red bean paste, a little butter.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-row"><span class="menu-item-name" data-i18n="menu.toast.name">Red Bean Butter Toast</span><span class="menu-item-price">£ 6</span></div>
+            <p class="menu-item-desc" data-i18n="menu.toast.desc">Thick-cut sourdough, red bean butter, flaky sea salt.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-row"><span class="menu-item-name" data-i18n="menu.onigiri.name">Onigiri of the Day</span><span class="menu-item-price">£ 4</span></div>
+            <p class="menu-item-desc" data-i18n="menu.onigiri.desc">Changes daily. Ask what Kenji made this morning.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="t-body menu-note" data-i18n="menu.note">All milks can be swapped at no charge. We don't do decaf — matcha doesn't really allow for it.</p>
     </div>
   </section>
 </div>
@@ -289,6 +366,7 @@
       <h4 data-i18n="footer.pages.h">Pages</h4>
       <a onclick="navigate('home')" data-i18n="footer.pages.home">Home</a>
       <a onclick="navigate('about')" data-i18n="nav.about">About</a>
+      <a onclick="navigate('menu')" data-i18n="nav.menu">Menu</a>
       <a onclick="navigate('journal')" data-i18n="nav.journal">Journal</a>
       <a onclick="navigate('shop')" data-i18n="nav.shop">Shop</a>
       <a onclick="navigate('visit')" data-i18n="nav.visit">Visit</a>
@@ -308,8 +386,8 @@
 </footer>
 
 <script src="js/articles.js?v=5"></script>
-<script src="js/i18n.js?v=6"></script>
-<script src="js/main.js?v=6"></script>
+<script src="js/i18n.js?v=7"></script>
+<script src="js/main.js?v=7"></script>
 
 </body>
 </html>

@@ -145,6 +145,24 @@ footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48p
 .about-grid-cell .t-label{margin-bottom:16px}
 .about-grid-cell .t-h3{margin-bottom:16px}
 
+/* ══ MENU ════════════════════════════════════════════════════════════════ */
+.menu-hero{background:var(--green-dark);padding:140px 48px 80px}
+.menu-hero-inner{max-width:760px;margin:0 auto}
+.menu-hero .t-display{color:white}
+.menu-hero .t-label{color:rgba(255,255,255,0.4)}
+.menu-hero .t-italic{color:rgba(255,255,255,0.7)}
+.menu-body{background:var(--white)}
+.menu-body-inner{max-width:760px;margin:0 auto;padding:80px 48px}
+.menu-category{margin-bottom:64px}
+.menu-category-label{margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--lgray)}
+.menu-list{display:flex;flex-direction:column;gap:28px}
+.menu-item-row{display:flex;justify-content:space-between;align-items:baseline;gap:24px}
+.menu-item-name{font-family:var(--serif);font-size:1.15rem}
+.lang-ja .menu-item-name{font-family:var(--serif-ja);font-size:1.05rem}
+.menu-item-price{font-size:0.85rem;color:var(--gray);white-space:nowrap}
+.menu-item-desc{font-size:0.88rem;color:#5a5a5a;font-weight:300;line-height:1.7;margin-top:8px}
+.menu-note{color:var(--gray);font-size:0.82rem;text-align:center;margin-top:24px}
+
 /* ══ JOURNAL ═════════════════════════════════════════════════════════════ */
 .journal-hero{background:var(--cream);padding:140px 48px 80px;border-bottom:1px solid var(--lgray)}
 .journal-hero-inner{max-width:1200px;margin:0 auto}
@@ -231,7 +249,8 @@ nav.dark .coming-soon-badge{color:inherit}
   .journal-featured{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr}
   .shop-hero-inner{grid-template-columns:1fr}
-  .about-hero,.journal-hero,.shop-hero,.visit-hero,.article-hero{padding:120px 24px 60px}
+  .about-hero,.journal-hero,.shop-hero,.visit-hero,.article-hero,.menu-hero{padding:120px 24px 60px}
+  .menu-body-inner{padding:60px 24px}
   .visit-image-row{display:none}
   .article-body-inner,.article-hero-inner,.article-nav-row{padding-left:24px;padding-right:24px}
 }
