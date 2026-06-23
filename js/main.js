@@ -167,14 +167,6 @@ window.addEventListener('popstate', e => {
   if (e.state && e.state.route) navigate(e.state.route);
 });
 
-// Shop filter tabs
-document.querySelectorAll('.shop-filter span').forEach(span => {
-  span.addEventListener('click', function() {
-    document.querySelectorAll('.shop-filter span').forEach(s => s.classList.remove('active'));
-    this.classList.add('active');
-  });
-});
-
 // Init
 (function() {
   renderHomeJournal();

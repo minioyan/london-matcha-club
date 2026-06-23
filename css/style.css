@@ -41,7 +41,6 @@ a{color:inherit;text-decoration:none}
 .container{max-width:1200px;margin:0 auto;padding:0 40px}
 .section-pad{padding:120px 0}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 
 /* ── Image Placeholders ─────────────────────────────────────────────── */
 .img-ph{width:100%;position:relative;overflow:hidden;background:var(--lgray)}
@@ -85,7 +84,9 @@ nav.dark.scrolled .lang-toggle{border-left-color:rgba(0,0,0,0.15)}
 
 /* ── Footer ─────────────────────────────────────────────────────────── */
 footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48px}
-.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,0.15)}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,0.15)}
+.social-icon{display:inline-flex;align-items:center;margin-top:4px;color:rgba(255,255,255,0.7);transition:color 0.2s}
+.social-icon:hover{color:white}
 .footer-logo{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:white;margin-bottom:16px;letter-spacing:0.05em}
 .footer-tagline{font-family:var(--serif);font-style:italic;font-size:0.95rem;color:rgba(255,255,255,0.5);line-height:1.7}
 .lang-ja .footer-tagline{font-style:normal}
@@ -123,20 +124,7 @@ footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48p
 .journal-card-title{font-family:var(--serif);font-size:1.25rem;font-weight:400;line-height:1.35;margin-bottom:12px}
 .lang-ja .journal-card-title{font-family:var(--serif-ja);font-size:1.1rem}
 .journal-card-excerpt{font-size:0.85rem;color:#5a5a5a;font-weight:300;line-height:1.7}
-.home-shop{background:var(--lgray)}
-.product-card{cursor:pointer}
-.product-card-img{position:relative;overflow:hidden;aspect-ratio:3/4;margin-bottom:20px}
-.product-card-img div{width:100%;height:100%;background:linear-gradient(180deg,#f0ede7 0%,#e2ddd5 100%);transition:transform 0.5s ease}
-.product-card:hover .product-card-img div{transform:scale(1.04)}
-.product-card-name{font-family:var(--serif);font-size:1.05rem;margin-bottom:6px}
-.product-card-price{font-size:0.85rem;color:var(--gray);font-weight:300}
-.home-grid{background:var(--white);padding:80px 0}
-.home-grid-title{text-align:center;margin-bottom:48px}
-.home-grid-title .t-label{margin-bottom:12px}
-.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:3px}
-.ig-cell{aspect-ratio:1/1;overflow:hidden;cursor:pointer}
-.ig-cell div{width:100%;height:100%;transition:transform 0.4s ease}
-.ig-cell:hover div{transform:scale(1.08)}
+.home-shop{background:var(--lgray);padding-bottom:80px}
 
 /* ══ ABOUT ═══════════════════════════════════════════════════════════════ */
 .about-hero{background:var(--green);padding:160px 48px 80px}
@@ -193,24 +181,8 @@ footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48p
 .shop-hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
 .shop-hero .t-label{margin-bottom:24px}
 .shop-hero-text .t-italic{margin-top:24px}
-.shop-intro{max-width:1200px;margin:0 auto;padding:48px 48px;border-bottom:1px solid var(--lgray)}
-.shop-filter{display:flex;gap:32px}
-.shop-filter span{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;padding-bottom:4px;color:var(--gray);border-bottom:1px solid transparent;transition:all 0.2s}
-.shop-filter span.active,.shop-filter span:hover{color:var(--black);border-bottom-color:var(--black)}
-.shop-grid-section{max-width:1200px;margin:0 auto;padding:60px 48px 120px}
-.shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-.shop-product-img{aspect-ratio:3/4;overflow:hidden;margin-bottom:20px}
-.shop-product-img div{width:100%;height:100%;background:linear-gradient(180deg,#f0ede7 0%,#e2ddd5 100%);transition:transform 0.5s}
-.shop-product:hover .shop-product-img div{transform:scale(1.03)}
-.shop-product-label{display:flex;justify-content:space-between;align-items:baseline}
-.shop-product-name{font-family:var(--serif);font-size:1.1rem}
-.lang-ja .shop-product-name{font-family:var(--serif-ja);font-size:1rem}
-.shop-product-price{font-size:0.85rem;color:var(--gray)}
-.shop-product-sub{font-size:0.78rem;color:var(--gray);margin-top:6px;font-weight:300}
-.add-to-cart{display:block;width:100%;margin-top:16px;padding:12px;border:1px solid var(--lgray);background:transparent;font-family:var(--sans);font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;text-align:center;color:var(--black)}
-.add-to-cart:hover{background:var(--black);color:white;border-color:var(--black)}
-.add-to-cart:disabled{cursor:not-allowed;color:var(--gray);background:transparent}
-.add-to-cart:disabled:hover{background:transparent;color:var(--gray);border-color:var(--lgray)}
+.shop-coming-soon{max-width:800px;margin:0 auto;padding:80px 48px;text-align:center}
+.shop-coming-soon-inner .t-italic{font-size:1.25rem}
 .coming-soon-badge{display:inline-block;margin-left:16px;padding:6px 14px;border:1px solid currentColor;font-family:var(--sans);font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--green);vertical-align:middle}
 nav.dark .coming-soon-badge{color:inherit}
 .shop-philosophy{background:var(--green);color:white;padding:100px 48px}
@@ -254,9 +226,7 @@ nav.dark .coming-soon-badge{color:inherit}
   .nav-links{gap:20px}
   .lang-toggle{margin-left:16px;padding-left:16px}
   .home-intro-inner,.about-story-inner,.visit-main-inner{grid-template-columns:1fr;gap:48px}
-  .grid-3,.journal-grid,.shop-grid{grid-template-columns:1fr 1fr;gap:24px}
-  .grid-4{grid-template-columns:repeat(2,1fr)}
-  .ig-grid{grid-template-columns:repeat(3,1fr)}
+  .grid-3,.journal-grid{grid-template-columns:1fr 1fr;gap:24px}
   .footer-inner{grid-template-columns:1fr 1fr;gap:40px}
   .journal-featured{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr}
@@ -266,7 +236,7 @@ nav.dark .coming-soon-badge{color:inherit}
   .article-body-inner,.article-hero-inner,.article-nav-row{padding-left:24px;padding-right:24px}
 }
 @media(max-width:480px){
-  .grid-3,.journal-grid,.shop-grid,.grid-4{grid-template-columns:1fr}
+  .grid-3,.journal-grid{grid-template-columns:1fr}
   .footer-inner{grid-template-columns:1fr}
   nav{padding:0 16px}
   .nav-logo-full{display:none}
