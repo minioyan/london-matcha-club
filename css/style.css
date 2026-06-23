@@ -157,8 +157,10 @@ footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48p
 .menu-category-label{margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--lgray)}
 .menu-list{display:flex;flex-direction:column;gap:28px}
 .menu-item-row{display:flex;justify-content:space-between;align-items:baseline;gap:24px}
-.menu-item-name{font-family:var(--serif);font-size:1.15rem}
+.menu-item-name{font-family:var(--serif);font-size:1.15rem;margin-right:10px}
 .lang-ja .menu-item-name{font-family:var(--serif-ja);font-size:1.05rem}
+.menu-item-sub{font-family:var(--sans);font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray)}
+.lang-ja .menu-item-sub{font-family:var(--sans-ja);text-transform:none;letter-spacing:0.04em}
 .menu-item-price{font-size:0.85rem;color:var(--gray);white-space:nowrap}
 .menu-item-desc{font-size:0.88rem;color:#5a5a5a;font-weight:300;line-height:1.7;margin-top:8px}
 .menu-note{color:var(--gray);font-size:0.82rem;text-align:center;margin-top:24px}
@@ -260,7 +262,7 @@ nav.dark .coming-soon-badge{color:inherit}
   nav{padding:0 16px}
   .nav-logo-full{display:none}
   .nav-logo-short{display:inline}
-  .nav-links{gap:12px}
-  .nav-links a{font-size:0.62rem}
-  .lang-toggle{margin-left:10px;padding-left:10px}
+  .nav-links{gap:8px}
+  .nav-links a{font-size:0.56rem;letter-spacing:0.06em}
+  .lang-toggle{margin-left:8px;padding-left:8px}
 }
