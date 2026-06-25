@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=14">
+<link rel="stylesheet" href="css/style.css?v=15">
 </head>
 <body>
 
@@ -28,11 +28,6 @@
       <a onclick="navigate('shop')" data-page="shop" data-i18n="nav.shop">Shop</a>
       <a onclick="navigate('visit')" data-page="visit" data-i18n="nav.visit">Visit</a>
     </div>
-    <div class="lang-toggle">
-      <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
-      <span class="lang-sep">|</span>
-      <button class="lang-btn" data-lang="ja" onclick="setLanguage('ja')">JP</button>
-    </div>
   </div>
 </nav>
 
@@ -44,6 +39,7 @@
       <div class="t-label hero-label" data-i18n="home.hero.label">Notting Hill, London</div>
       <h1 class="hero-title">London<br>Matcha<br>Club</h1>
       <p class="hero-subtitle" data-i18n="home.hero.subtitle">A matcha bar for those who move slowly on purpose.</p>
+      <span class="t-sub-en" style="color:rgba(255,255,255,0.5);margin-bottom:32px">A matcha bar for those who move slowly on purpose.</span>
       <span class="btn btn-white" onclick="navigate('shop')" data-i18n="home.hero.cta">View Collection</span>
     </div>
   </section>
@@ -54,6 +50,7 @@
       <div class="home-intro-text">
         <div class="t-label" data-i18n="home.intro.label">The people behind LMC</div>
         <h2 class="t-h1" data-i18n="home.intro.h1">We are Kenji &amp; Clara.</h2>
+        <span class="t-sub-en">We are Kenji &amp; Clara.</span>
         <p class="t-italic" data-i18n="home.intro.italic">A Japanese craftsman and a London designer, sharing a quiet obsession with the way a single bowl of matcha can change the pace of a day.</p>
         <p class="t-body" data-i18n="home.intro.body">We opened London Matcha Club not to build a brand, but because we couldn't find the place we were looking for. Five years later, we're still brewing slowly, still making the clothes we want to wear, still learning from every bowl.</p>
         <span class="arrow-link" onclick="navigate('about')" data-i18n="home.intro.link">Read our story</span>
@@ -67,27 +64,28 @@
         <div>
           <div class="t-label" style="margin-bottom:12px" data-i18n="home.menu.label">From the menu</div>
           <h2 class="t-h2" data-i18n="home.menu.h2">What We Pour</h2>
+          <span class="t-sub-en">What We Pour</span>
         </div>
         <span class="arrow-link" onclick="navigate('menu')" data-i18n="home.menu.link">Full menu</span>
       </div>
       <div class="grid-3 home-menu-grid">
         <div class="home-menu-item" onclick="navigate('menu')">
           <div class="menu-item-row">
-            <span><span class="menu-item-name" data-i18n="menu.usucha.name">Six Forty-Seven</span><span class="menu-item-sub" data-i18n="menu.usucha.sub">Usucha — thin tea</span></span>
+            <span><span class="menu-item-name" data-i18n="menu.usucha.name">Six Forty-Seven</span><span class="menu-item-name-en">Six Forty-Seven</span><span class="menu-item-sub" data-i18n="menu.usucha.sub">Usucha — thin tea</span></span>
             <span class="menu-item-price">£ 6.5</span>
           </div>
           <p class="menu-item-desc" data-i18n="menu.usucha.desc">Whisked to order, ceremonial grade. Light, frothy, a little bitter — the everyday bowl.</p>
         </div>
         <div class="home-menu-item" onclick="navigate('menu')">
           <div class="menu-item-row">
-            <span><span class="menu-item-name" data-i18n="menu.iced.name">Just the Leaf</span><span class="menu-item-sub" data-i18n="menu.iced.sub">Iced Matcha</span></span>
+            <span><span class="menu-item-name" data-i18n="menu.iced.name">Just the Leaf</span><span class="menu-item-name-en">Just the Leaf</span><span class="menu-item-sub" data-i18n="menu.iced.sub">Iced Matcha</span></span>
             <span class="menu-item-price">£ 6.5</span>
           </div>
           <p class="menu-item-desc" data-i18n="menu.iced.desc">Whisked cold over ice. No syrup — we'd rather you taste the leaf.</p>
         </div>
         <div class="home-menu-item" onclick="navigate('menu')">
           <div class="menu-item-row">
-            <span><span class="menu-item-name" data-i18n="menu.financier.name">Sunday Financier</span><span class="menu-item-sub" data-i18n="menu.financier.sub">Matcha Financier</span></span>
+            <span><span class="menu-item-name" data-i18n="menu.financier.name">Sunday Financier</span><span class="menu-item-name-en">Sunday Financier</span><span class="menu-item-sub" data-i18n="menu.financier.sub">Matcha Financier</span></span>
             <span class="menu-item-price">£ 4.5</span>
           </div>
           <p class="menu-item-desc" data-i18n="menu.financier.desc">Brown butter, almond, baked daily in small batches.</p>
@@ -102,6 +100,7 @@
         <div>
           <div class="t-label" style="margin-bottom:12px" data-i18n="home.journal.label">From the journal</div>
           <h2 class="t-h2" data-i18n="home.journal.h2">Craft &amp; Observation</h2>
+          <span class="t-sub-en">Craft &amp; Observation</span>
         </div>
         <span class="arrow-link" onclick="navigate('journal')" data-i18n="home.journal.link">All entries</span>
       </div>
@@ -117,6 +116,7 @@
           <span data-i18n="home.shop.h2">Wear</span>
           <span class="coming-soon-badge" data-i18n="shop.comingsoon">Coming Soon</span>
         </h2>
+        <span class="t-sub-en">Wear</span>
         <p class="t-italic" data-i18n="home.shop.italic">Clothes for people who don't think about their clothes. Natural fibres, cut for stillness, made in small batches — the same patience we put into a bowl of matcha.</p>
         <span class="arrow-link" onclick="navigate('shop')" data-i18n="home.shop.link">Learn more</span>
       </div>
@@ -131,6 +131,7 @@
     <div class="about-hero-inner">
       <div class="t-label" style="color:rgba(255,255,255,0.4)" data-i18n="about.hero.label">About</div>
       <h1 class="t-display" style="color:white;max-width:700px;margin-top:28px" data-i18n="about.hero.display">Two people,<br><em>one obsession.</em></h1>
+      <span class="t-sub-en" style="color:rgba(255,255,255,0.5)">Two people, one obsession.</span>
     </div>
   </section>
 
@@ -139,7 +140,8 @@
       <div class="about-portrait" style="background-image:url('assets/profile-couple.jpg');background-size:cover;background-position:center"></div>
       <div class="about-text">
         <div class="t-label" data-i18n="about.story.label">Our story</div>
-        <h2 class="t-h2" style="margin-top:16px;margin-bottom:32px" data-i18n="about.story.h2">We met in East London, over bad coffee and a conversation that lasted four hours.</h2>
+        <h2 class="t-h2" style="margin-top:16px;margin-bottom:8px" data-i18n="about.story.h2">We met in East London, over bad coffee and a conversation that lasted four hours.</h2>
+        <span class="t-sub-en" style="margin-bottom:24px">We met in East London, over bad coffee and a conversation that lasted four hours.</span>
         <p class="t-italic" data-i18n="about.story.quote">"Kenji said he could make something better than what we were drinking. He was right." — Clara</p>
         <p class="t-body" data-i18n="about.story.body1">Kenji grew up in Kyoto, where tea is not a beverage but a practice. After fifteen years in London working as a graphic designer, he found himself increasingly drawn back to the rituals of his upbringing — the quiet, the slowness, the way a single bowl could reframe an entire morning.</p>
         <p class="t-body" data-i18n="about.story.body2">Clara, born and raised in Hackney, had spent her career designing interiors that felt like exhales. When the two of them began talking about opening a space together, they were describing the same place without knowing it.</p>
@@ -154,7 +156,8 @@
   <section class="about-philosophy">
     <div class="about-philosophy-inner">
       <div class="t-label" data-i18n="about.phil.label">Our philosophy</div>
-      <h2 class="t-h1" style="margin-top:24px;margin-bottom:40px" data-i18n="about.phil.h1">Calm is not an aesthetic.<br>It's a decision.</h2>
+      <h2 class="t-h1" style="margin-top:24px;margin-bottom:16px" data-i18n="about.phil.h1">Calm is not an aesthetic.<br>It's a decision.</h2>
+      <span class="t-sub-en" style="margin-bottom:24px">Calm is not an aesthetic. It's a decision.</span>
       <p class="t-italic" data-i18n="about.phil.italic">Everything we do — the matcha we source, the clothes we make, the way we arrange the room — comes from the same impulse: to make space for the unhurried. We're not minimalists out of taste. We're minimalists out of necessity.</p>
       <div class="about-grid">
         <div class="about-grid-cell">
@@ -183,6 +186,7 @@
     <div class="menu-hero-inner">
       <div class="t-label" data-i18n="menu.hero.label">Menu</div>
       <h1 class="t-display" style="margin-top:28px" data-i18n="menu.hero.display">What we<br>pour &amp; serve.</h1>
+      <span class="t-sub-en">What we pour &amp; serve.</span>
       <p class="t-italic" style="margin-top:28px;max-width:560px" data-i18n="menu.hero.italic">Everything is whisked, steeped, or baked to order. Please allow a few extra minutes — that's rather the point.</p>
     </div>
   </section>
@@ -195,28 +199,28 @@
         <div class="menu-list">
           <div class="menu-item">
             <div class="menu-item-row">
-              <span><span class="menu-item-name" data-i18n="menu.usucha.name">Six Forty-Seven</span><span class="menu-item-sub" data-i18n="menu.usucha.sub">Usucha — thin tea</span></span>
+              <span><span class="menu-item-name" data-i18n="menu.usucha.name">Six Forty-Seven</span><span class="menu-item-name-en">Six Forty-Seven</span><span class="menu-item-sub" data-i18n="menu.usucha.sub">Usucha — thin tea</span></span>
               <span class="menu-item-price">£ 6.5</span>
             </div>
             <p class="menu-item-desc" data-i18n="menu.usucha.desc">Whisked to order, ceremonial grade. Light, frothy, a little bitter — the everyday bowl.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-row">
-              <span><span class="menu-item-name" data-i18n="menu.koicha.name">Stay a While</span><span class="menu-item-sub" data-i18n="menu.koicha.sub">Koicha — thick tea</span></span>
+              <span><span class="menu-item-name" data-i18n="menu.koicha.name">Stay a While</span><span class="menu-item-name-en">Stay a While</span><span class="menu-item-sub" data-i18n="menu.koicha.sub">Koicha — thick tea</span></span>
               <span class="menu-item-price">£ 8.5</span>
             </div>
             <p class="menu-item-desc" data-i18n="menu.koicha.desc">Double the matcha, almost no water. Dense, sweet, made for sitting still.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-row">
-              <span><span class="menu-item-name" data-i18n="menu.iced.name">Just the Leaf</span><span class="menu-item-sub" data-i18n="menu.iced.sub">Iced Matcha</span></span>
+              <span><span class="menu-item-name" data-i18n="menu.iced.name">Just the Leaf</span><span class="menu-item-name-en">Just the Leaf</span><span class="menu-item-sub" data-i18n="menu.iced.sub">Iced Matcha</span></span>
               <span class="menu-item-price">£ 6.5</span>
             </div>
             <p class="menu-item-desc" data-i18n="menu.iced.desc">Whisked cold over ice. No syrup — we'd rather you taste the leaf.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-row">
-              <span><span class="menu-item-name" data-i18n="menu.latte.name">Clara's Order</span><span class="menu-item-sub" data-i18n="menu.latte.sub">Matcha Latte</span></span>
+              <span><span class="menu-item-name" data-i18n="menu.latte.name">Clara's Order</span><span class="menu-item-name-en">Clara's Order</span><span class="menu-item-sub" data-i18n="menu.latte.sub">Matcha Latte</span></span>
               <span class="menu-item-price">£ 7</span>
             </div>
             <p class="menu-item-desc" data-i18n="menu.latte.desc">Oat milk by default. Hot or iced. Lightly sweetened with raw honey.</p>
@@ -229,14 +233,14 @@
         <div class="menu-list">
           <div class="menu-item">
             <div class="menu-item-row">
-              <span><span class="menu-item-name" data-i18n="menu.hojicha.name">Four O'Clock</span><span class="menu-item-sub" data-i18n="menu.hojicha.sub">Hojicha Latte</span></span>
+              <span><span class="menu-item-name" data-i18n="menu.hojicha.name">Four O'Clock</span><span class="menu-item-name-en">Four O'Clock</span><span class="menu-item-sub" data-i18n="menu.hojicha.sub">Hojicha Latte</span></span>
               <span class="menu-item-price">£ 6.5</span>
             </div>
             <p class="menu-item-desc" data-i18n="menu.hojicha.desc">Roasted green tea, low caffeine, deep and a little smoky.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-row">
-              <span><span class="menu-item-name" data-i18n="menu.genmaicha.name">What I Drink at Home</span><span class="menu-item-sub" data-i18n="menu.genmaicha.sub">Genmaicha</span></span>
+              <span><span class="menu-item-name" data-i18n="menu.genmaicha.name">What I Drink at Home</span><span class="menu-item-name-en">What I Drink at Home</span><span class="menu-item-sub" data-i18n="menu.genmaicha.sub">Genmaicha</span></span>
               <span class="menu-item-price">£ 5.5</span>
             </div>
             <p class="menu-item-desc" data-i18n="menu.genmaicha.desc">Green tea with roasted brown rice. Toasty, savoury, no caffeine crash.</p>
@@ -249,28 +253,28 @@
         <div class="menu-list">
           <div class="menu-item">
             <div class="menu-item-row">
-              <span><span class="menu-item-name" data-i18n="menu.financier.name">Sunday Financier</span><span class="menu-item-sub" data-i18n="menu.financier.sub">Matcha Financier</span></span>
+              <span><span class="menu-item-name" data-i18n="menu.financier.name">Sunday Financier</span><span class="menu-item-name-en">Sunday Financier</span><span class="menu-item-sub" data-i18n="menu.financier.sub">Matcha Financier</span></span>
               <span class="menu-item-price">£ 4.5</span>
             </div>
             <p class="menu-item-desc" data-i18n="menu.financier.desc">Brown butter, almond, baked daily in small batches.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-row">
-              <span><span class="menu-item-name" data-i18n="menu.dorayaki.name">My Mother's Dorayaki</span><span class="menu-item-sub" data-i18n="menu.dorayaki.sub">Dorayaki</span></span>
+              <span><span class="menu-item-name" data-i18n="menu.dorayaki.name">My Mother's Dorayaki</span><span class="menu-item-name-en">My Mother's Dorayaki</span><span class="menu-item-sub" data-i18n="menu.dorayaki.sub">Dorayaki</span></span>
               <span class="menu-item-price">£ 4.5</span>
             </div>
             <p class="menu-item-desc" data-i18n="menu.dorayaki.desc">Two pancakes, red bean paste, a little butter.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-row">
-              <span><span class="menu-item-name" data-i18n="menu.toast.name">Slow Toast</span><span class="menu-item-sub" data-i18n="menu.toast.sub">Red Bean Butter Toast</span></span>
+              <span><span class="menu-item-name" data-i18n="menu.toast.name">Slow Toast</span><span class="menu-item-name-en">Slow Toast</span><span class="menu-item-sub" data-i18n="menu.toast.sub">Red Bean Butter Toast</span></span>
               <span class="menu-item-price">£ 6</span>
             </div>
             <p class="menu-item-desc" data-i18n="menu.toast.desc">Thick-cut sourdough, red bean butter, flaky sea salt.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-row">
-              <span><span class="menu-item-name" data-i18n="menu.onigiri.name">This Morning's Onigiri</span><span class="menu-item-sub" data-i18n="menu.onigiri.sub">Onigiri of the Day</span></span>
+              <span><span class="menu-item-name" data-i18n="menu.onigiri.name">This Morning's Onigiri</span><span class="menu-item-name-en">This Morning's Onigiri</span><span class="menu-item-sub" data-i18n="menu.onigiri.sub">Onigiri of the Day</span></span>
               <span class="menu-item-price">£ 4</span>
             </div>
             <p class="menu-item-desc" data-i18n="menu.onigiri.desc">Changes daily. Ask what Kenji made this morning.</p>
@@ -289,6 +293,7 @@
     <div class="journal-hero-inner">
       <div class="t-label" data-i18n="journal.hero.label">Journal</div>
       <h1 class="t-display" style="margin-top:28px" data-i18n="journal.hero.display">Notes on<br>craft &amp; living.</h1>
+      <span class="t-sub-en">Notes on craft &amp; living.</span>
     </div>
   </section>
 
@@ -306,6 +311,7 @@
     <div class="article-hero-inner">
       <div class="t-label" id="article-date"></div>
       <h1 class="t-display" style="margin-top:28px;font-size:clamp(2.2rem,5vw,3.5rem)" id="article-title"></h1>
+      <span class="t-sub-en" id="article-title-en"></span>
     </div>
   </section>
   <section class="article-body-section">
@@ -329,6 +335,7 @@
           <span data-i18n="shop.hero.display">Wear.</span>
           <span class="coming-soon-badge" data-i18n="shop.comingsoon">Coming Soon</span>
         </h1>
+        <span class="t-sub-en">Wear.</span>
       </div>
       <div class="shop-hero-text">
         <p class="t-italic" data-i18n="shop.hero.italic">Clothes for people who don't think about their clothes. Made from natural fibres, cut for stillness, designed to last longer than a season.</p>
@@ -348,7 +355,8 @@
       <div class="home-shop-img" style="background-image:url('assets/journal/linen-winter.jpg')"></div>
       <div class="home-shop-text">
         <div class="t-label" data-i18n="shop.detail.label">In the making</div>
-        <h2 class="t-h2" style="margin-bottom:28px" data-i18n="shop.detail.h2">Natural fibres, small batches.</h2>
+        <h2 class="t-h2" style="margin-bottom:8px" data-i18n="shop.detail.h2">Natural fibres, small batches.</h2>
+        <span class="t-sub-en" style="margin-bottom:24px">Natural fibres, small batches.</span>
         <p class="t-body" data-i18n="shop.detail.body">Every piece is cut from organic cotton and linen, sewn in small runs in Portugal and Japan. We design for standing all day, for washing often, for getting better with age — the same things we ask of a good teabowl.</p>
       </div>
     </div>
@@ -372,6 +380,7 @@
     <div class="visit-hero-inner">
       <div class="t-label" style="color:rgba(255,255,255,0.4)" data-i18n="visit.hero.label">Visit</div>
       <h1 class="t-display hero-display-narrow" style="margin-top:28px;color:white" data-i18n="visit.hero.display">Find us on a quiet street in Notting Hill.</h1>
+      <span class="t-sub-en" style="color:rgba(255,255,255,0.5)">On a quiet street in Notting Hill.</span>
     </div>
   </section>
 
@@ -464,7 +473,7 @@
 
 <script src="js/articles.js?v=5"></script>
 <script src="js/i18n.js?v=10"></script>
-<script src="js/main.js?v=7"></script>
+<script src="js/main.js?v=8"></script>
 
 </body>
 </html>

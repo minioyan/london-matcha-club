@@ -1,7 +1,9 @@
-// ── Language system ────────────────────────────────────────────────────────
-let currentLang = localStorage.getItem('lmc-lang') || 'en';
+// ── Language ─────────────────────────────────────────────────────────────
+// The site is Japanese-first; English appears only as small inline annotations
+// baked directly into the HTML (see .t-sub-en), so there's no language switch.
+const currentLang = 'ja';
 
-window._t = (key) => (i18n[currentLang] && i18n[currentLang][key]) || (i18n.en[key] || key);
+window._t = (key) => (i18n.ja && i18n.ja[key]) || (i18n.en[key] || key);
 
 function bg(el, gradientOrUrl) {
   if (!gradientOrUrl) return;
@@ -47,7 +49,8 @@ function renderJournalList() {
         </div>
         <div class="journal-featured-text">
           <div class="t-label">${window._t('journal.feat.label')} — ${featured.date[currentLang] || featured.date.en}</div>
-          <h2 class="t-h2" style="margin:20px 0">${featured.title[currentLang] || featured.title.en}</h2>
+          <h2 class="t-h2" style="margin:20px 0 4px">${featured.title[currentLang] || featured.title.en}</h2>
+          <span class="t-sub-en" style="margin-bottom:20px">${featured.title.en}</span>
           <p class="t-body">${featured.excerpt[currentLang] || featured.excerpt.en}</p>
           <div style="margin-top:28px"><span class="arrow-link">${window._t('journal.feat.link')}</span></div>
         </div>
@@ -75,6 +78,7 @@ function renderArticle(slug) {
   currentArticleSlug = slug;
   document.getElementById('article-date').textContent = article.date[currentLang] || article.date.en;
   document.getElementById('article-title').innerHTML = article.title[currentLang] || article.title.en;
+  document.getElementById('article-title-en').textContent = article.title.en;
   const content = document.getElementById('article-content');
   content.innerHTML = article.body[currentLang] || article.body.en;
   bg(document.getElementById('article-cover-img'), articleImage(article));
@@ -95,27 +99,13 @@ function insertInlineImage(content, article) {
   target.after(wrapper);
 }
 
-function setLanguage(lang) {
-  if (!i18n[lang]) return;
-  currentLang = lang;
-  localStorage.setItem('lmc-lang', lang);
-
+function renderStaticText() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.dataset.i18n;
-    const val = window._t(key);
+    const val = window._t(el.dataset.i18n);
     if (val !== undefined) el.innerHTML = val;
   });
-
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-
-  document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
-  document.body.classList.toggle('lang-ja', lang === 'ja');
-
-  renderHomeJournal();
-  renderJournalList();
-  if (currentArticleSlug) renderArticle(currentArticleSlug);
+  document.documentElement.lang = 'ja';
+  document.body.classList.add('lang-ja');
 }
 
 // ── Router ───────────────────────────────────────────────────────────────
@@ -157,7 +147,6 @@ function navigate(route) {
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 window.navigate = navigate;
-window.setLanguage = setLanguage;
 
 window.addEventListener('scroll', () => {
   document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
@@ -169,6 +158,7 @@ window.addEventListener('popstate', e => {
 
 // Init
 (function() {
+  renderStaticText();
   renderHomeJournal();
   renderJournalList();
 
@@ -177,5 +167,4 @@ window.addEventListener('popstate', e => {
   const startRoute = pages.includes(page) ? route : 'home';
   navigate(startRoute);
   history.replaceState({ route: startRoute }, '', '#' + startRoute);
-  setLanguage(currentLang);
 })();
