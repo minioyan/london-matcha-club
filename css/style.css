@@ -156,6 +156,9 @@ footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48p
 .menu-category{margin-bottom:64px}
 .menu-category-label{margin-bottom:28px;padding-bottom:16px;border-bottom:1px solid var(--lgray)}
 .menu-list{display:flex;flex-direction:column;gap:28px}
+.menu-item{display:flex;gap:20px}
+.menu-item-thumb{flex:none;width:72px;height:72px;border-radius:6px;background-size:cover;background-position:center;background-color:var(--lgray)}
+.menu-item-body{flex:1;min-width:0}
 .menu-item-row{display:flex;justify-content:space-between;align-items:baseline;gap:24px}
 .menu-item-name{font-family:var(--serif);font-size:1.15rem;margin-right:10px}
 .lang-ja .menu-item-name{font-family:var(--serif-ja);font-size:1.05rem}
