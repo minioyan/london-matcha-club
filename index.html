@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=12">
+<link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body>
 
@@ -57,6 +57,41 @@
         <p class="t-italic" data-i18n="home.intro.italic">A Japanese craftsman and a London designer, sharing a quiet obsession with the way a single bowl of matcha can change the pace of a day.</p>
         <p class="t-body" data-i18n="home.intro.body">We opened London Matcha Club not to build a brand, but because we couldn't find the place we were looking for. Five years later, we're still brewing slowly, still making the clothes we want to wear, still learning from every bowl.</p>
         <span class="arrow-link" onclick="navigate('about')" data-i18n="home.intro.link">Read our story</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-menu section-pad">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="t-label" style="margin-bottom:12px" data-i18n="home.menu.label">From the menu</div>
+          <h2 class="t-h2" data-i18n="home.menu.h2">What We Pour</h2>
+        </div>
+        <span class="arrow-link" onclick="navigate('menu')" data-i18n="home.menu.link">Full menu</span>
+      </div>
+      <div class="grid-3 home-menu-grid">
+        <div class="home-menu-item" onclick="navigate('menu')">
+          <div class="menu-item-row">
+            <span><span class="menu-item-name" data-i18n="menu.usucha.name">Six Forty-Seven</span><span class="menu-item-sub" data-i18n="menu.usucha.sub">Usucha — thin tea</span></span>
+            <span class="menu-item-price">£ 6.5</span>
+          </div>
+          <p class="menu-item-desc" data-i18n="menu.usucha.desc">Whisked to order, ceremonial grade. Light, frothy, a little bitter — the everyday bowl.</p>
+        </div>
+        <div class="home-menu-item" onclick="navigate('menu')">
+          <div class="menu-item-row">
+            <span><span class="menu-item-name" data-i18n="menu.iced.name">Just the Leaf</span><span class="menu-item-sub" data-i18n="menu.iced.sub">Iced Matcha</span></span>
+            <span class="menu-item-price">£ 6.5</span>
+          </div>
+          <p class="menu-item-desc" data-i18n="menu.iced.desc">Whisked cold over ice. No syrup — we'd rather you taste the leaf.</p>
+        </div>
+        <div class="home-menu-item" onclick="navigate('menu')">
+          <div class="menu-item-row">
+            <span><span class="menu-item-name" data-i18n="menu.financier.name">Sunday Financier</span><span class="menu-item-sub" data-i18n="menu.financier.sub">Matcha Financier</span></span>
+            <span class="menu-item-price">£ 4.5</span>
+          </div>
+          <p class="menu-item-desc" data-i18n="menu.financier.desc">Brown butter, almond, baked daily in small batches.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -158,44 +193,32 @@
         <div class="t-label menu-category-label" data-i18n="menu.cat.matcha">Matcha</div>
         <div class="menu-list">
           <div class="menu-item">
-            <div class="menu-item-thumb" style="background-image:url('assets/menu/usucha.jpg')"></div>
-            <div class="menu-item-body">
-              <div class="menu-item-row">
-                <span><span class="menu-item-name" data-i18n="menu.usucha.name">Six Forty-Seven</span><span class="menu-item-sub" data-i18n="menu.usucha.sub">Usucha — thin tea</span></span>
-                <span class="menu-item-price">£ 6.5</span>
-              </div>
-              <p class="menu-item-desc" data-i18n="menu.usucha.desc">Whisked to order, ceremonial grade. Light, frothy, a little bitter — the everyday bowl.</p>
+            <div class="menu-item-row">
+              <span><span class="menu-item-name" data-i18n="menu.usucha.name">Six Forty-Seven</span><span class="menu-item-sub" data-i18n="menu.usucha.sub">Usucha — thin tea</span></span>
+              <span class="menu-item-price">£ 6.5</span>
             </div>
+            <p class="menu-item-desc" data-i18n="menu.usucha.desc">Whisked to order, ceremonial grade. Light, frothy, a little bitter — the everyday bowl.</p>
           </div>
           <div class="menu-item">
-            <div class="menu-item-thumb" style="background-image:url('assets/menu/koicha.jpg')"></div>
-            <div class="menu-item-body">
-              <div class="menu-item-row">
-                <span><span class="menu-item-name" data-i18n="menu.koicha.name">Stay a While</span><span class="menu-item-sub" data-i18n="menu.koicha.sub">Koicha — thick tea</span></span>
-                <span class="menu-item-price">£ 8.5</span>
-              </div>
-              <p class="menu-item-desc" data-i18n="menu.koicha.desc">Double the matcha, almost no water. Dense, sweet, made for sitting still.</p>
+            <div class="menu-item-row">
+              <span><span class="menu-item-name" data-i18n="menu.koicha.name">Stay a While</span><span class="menu-item-sub" data-i18n="menu.koicha.sub">Koicha — thick tea</span></span>
+              <span class="menu-item-price">£ 8.5</span>
             </div>
+            <p class="menu-item-desc" data-i18n="menu.koicha.desc">Double the matcha, almost no water. Dense, sweet, made for sitting still.</p>
           </div>
           <div class="menu-item">
-            <div class="menu-item-thumb" style="background-image:url('assets/menu/iced.jpg')"></div>
-            <div class="menu-item-body">
-              <div class="menu-item-row">
-                <span><span class="menu-item-name" data-i18n="menu.iced.name">Just the Leaf</span><span class="menu-item-sub" data-i18n="menu.iced.sub">Iced Matcha</span></span>
-                <span class="menu-item-price">£ 6.5</span>
-              </div>
-              <p class="menu-item-desc" data-i18n="menu.iced.desc">Whisked cold over ice. No syrup — we'd rather you taste the leaf.</p>
+            <div class="menu-item-row">
+              <span><span class="menu-item-name" data-i18n="menu.iced.name">Just the Leaf</span><span class="menu-item-sub" data-i18n="menu.iced.sub">Iced Matcha</span></span>
+              <span class="menu-item-price">£ 6.5</span>
             </div>
+            <p class="menu-item-desc" data-i18n="menu.iced.desc">Whisked cold over ice. No syrup — we'd rather you taste the leaf.</p>
           </div>
           <div class="menu-item">
-            <div class="menu-item-thumb" style="background-image:url('assets/menu/latte.jpg')"></div>
-            <div class="menu-item-body">
-              <div class="menu-item-row">
-                <span><span class="menu-item-name" data-i18n="menu.latte.name">Clara's Order</span><span class="menu-item-sub" data-i18n="menu.latte.sub">Matcha Latte</span></span>
-                <span class="menu-item-price">£ 7</span>
-              </div>
-              <p class="menu-item-desc" data-i18n="menu.latte.desc">Oat milk by default. Hot or iced. Lightly sweetened with raw honey.</p>
+            <div class="menu-item-row">
+              <span><span class="menu-item-name" data-i18n="menu.latte.name">Clara's Order</span><span class="menu-item-sub" data-i18n="menu.latte.sub">Matcha Latte</span></span>
+              <span class="menu-item-price">£ 7</span>
             </div>
+            <p class="menu-item-desc" data-i18n="menu.latte.desc">Oat milk by default. Hot or iced. Lightly sweetened with raw honey.</p>
           </div>
         </div>
       </div>
@@ -204,24 +227,18 @@
         <div class="t-label menu-category-label" data-i18n="menu.cat.other">Also pouring</div>
         <div class="menu-list">
           <div class="menu-item">
-            <div class="menu-item-thumb" style="background-image:url('assets/menu/hojicha.jpg')"></div>
-            <div class="menu-item-body">
-              <div class="menu-item-row">
-                <span><span class="menu-item-name" data-i18n="menu.hojicha.name">Four O'Clock</span><span class="menu-item-sub" data-i18n="menu.hojicha.sub">Hojicha Latte</span></span>
-                <span class="menu-item-price">£ 6.5</span>
-              </div>
-              <p class="menu-item-desc" data-i18n="menu.hojicha.desc">Roasted green tea, low caffeine, deep and a little smoky.</p>
+            <div class="menu-item-row">
+              <span><span class="menu-item-name" data-i18n="menu.hojicha.name">Four O'Clock</span><span class="menu-item-sub" data-i18n="menu.hojicha.sub">Hojicha Latte</span></span>
+              <span class="menu-item-price">£ 6.5</span>
             </div>
+            <p class="menu-item-desc" data-i18n="menu.hojicha.desc">Roasted green tea, low caffeine, deep and a little smoky.</p>
           </div>
           <div class="menu-item">
-            <div class="menu-item-thumb" style="background-image:url('assets/menu/genmaicha.jpg')"></div>
-            <div class="menu-item-body">
-              <div class="menu-item-row">
-                <span><span class="menu-item-name" data-i18n="menu.genmaicha.name">What I Drink at Home</span><span class="menu-item-sub" data-i18n="menu.genmaicha.sub">Genmaicha</span></span>
-                <span class="menu-item-price">£ 5.5</span>
-              </div>
-              <p class="menu-item-desc" data-i18n="menu.genmaicha.desc">Green tea with roasted brown rice. Toasty, savoury, no caffeine crash.</p>
+            <div class="menu-item-row">
+              <span><span class="menu-item-name" data-i18n="menu.genmaicha.name">What I Drink at Home</span><span class="menu-item-sub" data-i18n="menu.genmaicha.sub">Genmaicha</span></span>
+              <span class="menu-item-price">£ 5.5</span>
             </div>
+            <p class="menu-item-desc" data-i18n="menu.genmaicha.desc">Green tea with roasted brown rice. Toasty, savoury, no caffeine crash.</p>
           </div>
         </div>
       </div>
@@ -230,44 +247,32 @@
         <div class="t-label menu-category-label" data-i18n="menu.cat.eat">To eat</div>
         <div class="menu-list">
           <div class="menu-item">
-            <div class="menu-item-thumb" style="background-image:url('assets/menu/financier.jpg')"></div>
-            <div class="menu-item-body">
-              <div class="menu-item-row">
-                <span><span class="menu-item-name" data-i18n="menu.financier.name">Sunday Financier</span><span class="menu-item-sub" data-i18n="menu.financier.sub">Matcha Financier</span></span>
-                <span class="menu-item-price">£ 4.5</span>
-              </div>
-              <p class="menu-item-desc" data-i18n="menu.financier.desc">Brown butter, almond, baked daily in small batches.</p>
+            <div class="menu-item-row">
+              <span><span class="menu-item-name" data-i18n="menu.financier.name">Sunday Financier</span><span class="menu-item-sub" data-i18n="menu.financier.sub">Matcha Financier</span></span>
+              <span class="menu-item-price">£ 4.5</span>
             </div>
+            <p class="menu-item-desc" data-i18n="menu.financier.desc">Brown butter, almond, baked daily in small batches.</p>
           </div>
           <div class="menu-item">
-            <div class="menu-item-thumb" style="background-image:url('assets/menu/dorayaki.jpg')"></div>
-            <div class="menu-item-body">
-              <div class="menu-item-row">
-                <span><span class="menu-item-name" data-i18n="menu.dorayaki.name">My Mother's Dorayaki</span><span class="menu-item-sub" data-i18n="menu.dorayaki.sub">Dorayaki</span></span>
-                <span class="menu-item-price">£ 4.5</span>
-              </div>
-              <p class="menu-item-desc" data-i18n="menu.dorayaki.desc">Two pancakes, red bean paste, a little butter.</p>
+            <div class="menu-item-row">
+              <span><span class="menu-item-name" data-i18n="menu.dorayaki.name">My Mother's Dorayaki</span><span class="menu-item-sub" data-i18n="menu.dorayaki.sub">Dorayaki</span></span>
+              <span class="menu-item-price">£ 4.5</span>
             </div>
+            <p class="menu-item-desc" data-i18n="menu.dorayaki.desc">Two pancakes, red bean paste, a little butter.</p>
           </div>
           <div class="menu-item">
-            <div class="menu-item-thumb" style="background-image:url('assets/menu/toast.jpg')"></div>
-            <div class="menu-item-body">
-              <div class="menu-item-row">
-                <span><span class="menu-item-name" data-i18n="menu.toast.name">Slow Toast</span><span class="menu-item-sub" data-i18n="menu.toast.sub">Red Bean Butter Toast</span></span>
-                <span class="menu-item-price">£ 6</span>
-              </div>
-              <p class="menu-item-desc" data-i18n="menu.toast.desc">Thick-cut sourdough, red bean butter, flaky sea salt.</p>
+            <div class="menu-item-row">
+              <span><span class="menu-item-name" data-i18n="menu.toast.name">Slow Toast</span><span class="menu-item-sub" data-i18n="menu.toast.sub">Red Bean Butter Toast</span></span>
+              <span class="menu-item-price">£ 6</span>
             </div>
+            <p class="menu-item-desc" data-i18n="menu.toast.desc">Thick-cut sourdough, red bean butter, flaky sea salt.</p>
           </div>
           <div class="menu-item">
-            <div class="menu-item-thumb" style="background-image:url('assets/menu/onigiri.jpg')"></div>
-            <div class="menu-item-body">
-              <div class="menu-item-row">
-                <span><span class="menu-item-name" data-i18n="menu.onigiri.name">This Morning's Onigiri</span><span class="menu-item-sub" data-i18n="menu.onigiri.sub">Onigiri of the Day</span></span>
-                <span class="menu-item-price">£ 4</span>
-              </div>
-              <p class="menu-item-desc" data-i18n="menu.onigiri.desc">Changes daily. Ask what Kenji made this morning.</p>
+            <div class="menu-item-row">
+              <span><span class="menu-item-name" data-i18n="menu.onigiri.name">This Morning's Onigiri</span><span class="menu-item-sub" data-i18n="menu.onigiri.sub">Onigiri of the Day</span></span>
+              <span class="menu-item-price">£ 4</span>
             </div>
+            <p class="menu-item-desc" data-i18n="menu.onigiri.desc">Changes daily. Ask what Kenji made this morning.</p>
           </div>
         </div>
       </div>
@@ -446,7 +451,7 @@
 </footer>
 
 <script src="js/articles.js?v=5"></script>
-<script src="js/i18n.js?v=8"></script>
+<script src="js/i18n.js?v=9"></script>
 <script src="js/main.js?v=7"></script>
 
 </body>
