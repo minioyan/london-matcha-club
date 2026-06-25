@@ -129,7 +129,12 @@ footer{background:var(--green);color:rgba(255,255,255,0.7);padding:80px 48px 48p
 .journal-card-title{font-family:var(--serif);font-size:1.25rem;font-weight:400;line-height:1.35;margin-bottom:12px}
 .lang-ja .journal-card-title{font-family:var(--serif-ja);font-size:1.1rem}
 .journal-card-excerpt{font-size:0.85rem;color:#5a5a5a;font-weight:300;line-height:1.7}
-.home-shop{background:var(--lgray);padding-bottom:80px}
+.home-shop{background:var(--lgray)}
+.home-shop-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto;padding:120px 48px}
+.home-shop-text .t-label{margin-bottom:28px}
+.home-shop-text .t-h1{margin-bottom:28px;display:flex;align-items:center;flex-wrap:wrap;gap:16px}
+.home-shop-text .t-italic{margin-bottom:32px}
+.home-shop-img{aspect-ratio:3/4;background-size:cover;background-position:center;min-width:0}
 
 /* ══ ABOUT ═══════════════════════════════════════════════════════════════ */
 .about-hero{background:var(--green);padding:160px 48px 80px}
@@ -250,7 +255,7 @@ nav.dark .coming-soon-badge{color:inherit}
   nav{padding:0 24px}
   .nav-links{gap:20px}
   .lang-toggle{margin-left:16px;padding-left:16px}
-  .home-intro-inner,.about-story-inner,.visit-main-inner{grid-template-columns:1fr;gap:48px}
+  .home-intro-inner,.home-shop-inner,.about-story-inner,.visit-main-inner{grid-template-columns:1fr;gap:48px}
   .grid-3,.journal-grid{grid-template-columns:1fr 1fr;gap:24px}
   .footer-inner{grid-template-columns:1fr 1fr;gap:40px}
   .journal-featured{grid-template-columns:1fr}
