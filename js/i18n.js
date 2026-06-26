@@ -134,7 +134,6 @@ const i18n = {
     'footer.pages.home': 'Home',
     'footer.connect.h': 'Connect',
     'footer.connect.email': 'Email us',
-    'footer.copy': '© 2025 London Matcha Club',
     'footer.made': 'Made slowly in London',
   },
 
@@ -147,7 +146,7 @@ const i18n = {
 
     'home.hero.label': 'ロンドン、ノッティング・ヒル',
     'home.hero.subtitle': 'あえてゆっくりと動く人たちのための抹茶バー。',
-    'home.hero.cta': 'コレクションを見る',
+    'home.hero.cta': '詳しく見る',
     'home.intro.label': 'LMCを始めた二人',
     'home.intro.h1': 'わたしたちは健二とクララ。',
     'home.intro.italic': '日本人の職人と、ロンドンのデザイナー。一杯の抹茶が一日のリズムを変えてしまう——そんな静かな確信を、二人で共有しています。',
@@ -233,7 +232,7 @@ const i18n = {
     'journal.next': '次の記事 →',
 
     'shop.hero.label': 'コレクション',
-    'shop.hero.display': 'アパレルについて。',
+    'shop.hero.display': 'アパレルに<br>ついて。',
     'shop.hero.italic': '服のことを気にせず過ごせる人のための服。天然素材で仕立て、静けさのために作られ、一シーズンより長く着られるデザイン。',
     'shop.hero.delivery': '£150以上のご注文でUK国内送料無料。30日以内返品可。',
     'shop.comingsoon': '近日公開',
@@ -273,7 +272,6 @@ const i18n = {
     'footer.pages.home': 'ホーム',
     'footer.connect.h': 'つながる',
     'footer.connect.email': 'メールで問い合わせ',
-    'footer.copy': '© 2025 London Matcha Club',
     'footer.made': 'ロンドンで、ゆっくりと作られています',
   }
 };

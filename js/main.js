@@ -106,6 +106,9 @@ function renderStaticText() {
   });
   document.documentElement.lang = 'ja';
   document.body.classList.add('lang-ja');
+
+  const copyEl = document.getElementById('footer-copy');
+  if (copyEl) copyEl.textContent = `© ${new Date().getFullYear()} London Matcha Club`;
 }
 
 // ── Router ───────────────────────────────────────────────────────────────
