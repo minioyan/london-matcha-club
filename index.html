@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>London Matcha Club</title>
+<meta name="description" content="ノッティング・ヒルにある抹茶バー、London Matcha Club。健二とクララが営む、ゆっくりとした時間のための抹茶・お茶・フード、そしてアパレル。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Serif+JP:wght@300;400&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=16">
+<link rel="stylesheet" href="css/style.css?v=17">
 </head>
 <body>
 
@@ -34,7 +35,7 @@
 <!-- ══ HOME ══════════════════════════════════════════════════════════════ -->
 <div id="page-home" class="page">
   <section class="hero">
-    <div class="hero-bg" style="background-image:url('assets/shop-exterior.jpg')"></div>
+    <div class="hero-bg" role="img" aria-label="ノッティング・ヒルにあるLondon Matcha Clubの店構え。緑のドアと窓辺の盆栽。" style="background-image:url('assets/shop-exterior.jpg')"></div>
     <div class="hero-content">
       <div class="t-label hero-label" data-i18n="home.hero.label">Notting Hill, London</div>
       <h1 class="hero-title">London<br>Matcha<br>Club</h1>
@@ -46,7 +47,7 @@
 
   <section class="home-intro">
     <div class="home-intro-inner">
-      <div class="home-intro-img" style="background-image:url('assets/profile-couple.jpg')"></div>
+      <div class="home-intro-img" role="img" aria-label="店の前に並んで立つ健二とクララ。" style="background-image:url('assets/profile-couple.jpg')"></div>
       <div class="home-intro-text">
         <div class="t-label" data-i18n="home.intro.label">The people behind LMC</div>
         <h2 class="t-h1" data-i18n="home.intro.h1">We are Kenji &amp; Clara.</h2>
@@ -120,7 +121,7 @@
         <p class="t-italic" data-i18n="home.shop.italic">Clothes for people who don't think about their clothes. Natural fibres, cut for stillness, made in small batches — the same patience we put into a bowl of matcha.</p>
         <span class="arrow-link" onclick="navigate('shop')" data-i18n="home.shop.link">Learn more</span>
       </div>
-      <div class="home-shop-img" style="background-image:url('assets/journal/making-clothes.jpg')"></div>
+      <div class="home-shop-img" role="img" aria-label="折り重なったリネンの布地。" style="background-image:url('assets/journal/making-clothes.jpg')"></div>
     </div>
   </section>
 </div>
@@ -137,7 +138,7 @@
 
   <section class="about-story">
     <div class="about-story-inner">
-      <div class="about-portrait" style="background-image:url('assets/profile-couple.jpg');background-size:cover;background-position:center"></div>
+      <div class="about-portrait" role="img" aria-label="店の前に並んで立つ健二とクララ。" style="background-image:url('assets/profile-couple.jpg');background-size:cover;background-position:center"></div>
       <div class="about-text">
         <div class="t-label" data-i18n="about.story.label">Our story</div>
         <h2 class="t-h2" style="margin-top:16px;margin-bottom:8px" data-i18n="about.story.h2">We met in East London, over bad coffee and a conversation that lasted four hours.</h2>
@@ -352,7 +353,7 @@
 
   <section class="home-shop">
     <div class="home-shop-inner">
-      <div class="home-shop-img" style="background-image:url('assets/journal/linen-winter.jpg')"></div>
+      <div class="home-shop-img" role="img" aria-label="リネン素材のクローズアップ。" style="background-image:url('assets/journal/linen-winter.jpg')"></div>
       <div class="home-shop-text">
         <div class="t-label" data-i18n="shop.detail.label">In the making</div>
         <h2 class="t-h2" style="margin-bottom:8px" data-i18n="shop.detail.h2">Natural fibres, small batches.</h2>
@@ -426,7 +427,7 @@
     </div>
   </section>
 
-  <div class="visit-image-row">
+  <div class="visit-image-row" aria-hidden="true">
     <div class="visit-image-cell"><div class="img-ph" style="height:100%;background:linear-gradient(135deg,#30442f,#4a6b3a)"></div></div>
     <div class="visit-image-cell"><div class="img-ph" style="height:100%;background:linear-gradient(135deg,#e8e4dd,#d5d0c8)"></div></div>
     <div class="visit-image-cell"><div class="img-ph" style="height:100%;background:linear-gradient(135deg,#c8c2b5,#b0aa9e)"></div></div>
@@ -473,7 +474,7 @@
 
 <script src="js/articles.js?v=5"></script>
 <script src="js/i18n.js?v=14"></script>
-<script src="js/main.js?v=9"></script>
+<script src="js/main.js?v=10"></script>
 
 </body>
 </html>

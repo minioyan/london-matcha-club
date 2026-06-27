@@ -27,7 +27,7 @@ function renderHomeJournal() {
   const latest = ARTICLES.slice(0, 3);
   mount.innerHTML = latest.map(a => `
     <div class="journal-card" onclick="navigate('article/${a.slug}')">
-      <div class="journal-card-img"><div style="background:${articleImage(a)}"></div></div>
+      <div class="journal-card-img"><div role="img" aria-label="${a.title[currentLang] || a.title.en}" style="background:${articleImage(a)}"></div></div>
       <div class="journal-card-date">${a.date[currentLang] || a.date.en}</div>
       <div class="journal-card-title">${a.title[currentLang] || a.title.en}</div>
       <p class="journal-card-excerpt">${a.excerpt[currentLang] || a.excerpt.en}</p>
@@ -45,7 +45,7 @@ function renderJournalList() {
     featuredMount.innerHTML = `
       <div class="journal-featured" onclick="navigate('article/${featured.slug}')">
         <div class="journal-featured-img">
-          <div style="background:${articleImage(featured)};height:380px"></div>
+          <div role="img" aria-label="${featured.title[currentLang] || featured.title.en}" style="background:${articleImage(featured)};height:380px"></div>
         </div>
         <div class="journal-featured-text">
           <div class="t-label">${window._t('journal.feat.label')} — ${featured.date[currentLang] || featured.date.en}</div>
@@ -59,7 +59,7 @@ function renderJournalList() {
 
   gridMount.innerHTML = rest.map(a => `
     <div class="journal-card" onclick="navigate('article/${a.slug}')">
-      <div class="journal-card-img"><div style="height:220px;background:${articleImage(a)}"></div></div>
+      <div class="journal-card-img"><div role="img" aria-label="${a.title[currentLang] || a.title.en}" style="height:220px;background:${articleImage(a)}"></div></div>
       <div class="journal-card-date">${a.date[currentLang] || a.date.en}</div>
       <div class="journal-card-title">${a.title[currentLang] || a.title.en}</div>
       <p class="journal-card-excerpt">${a.excerpt[currentLang] || a.excerpt.en}</p>
@@ -81,7 +81,10 @@ function renderArticle(slug) {
   document.getElementById('article-title-en').textContent = article.title.en;
   const content = document.getElementById('article-content');
   content.innerHTML = article.body[currentLang] || article.body.en;
-  bg(document.getElementById('article-cover-img'), articleImage(article));
+  const coverEl = document.getElementById('article-cover-img');
+  bg(coverEl, articleImage(article));
+  coverEl.setAttribute('role', 'img');
+  coverEl.setAttribute('aria-label', article.title[currentLang] || article.title.en);
   insertInlineImage(content, article);
 }
 
@@ -94,6 +97,7 @@ function insertInlineImage(content, article) {
   const wrapper = document.createElement('div');
   wrapper.className = 'article-inline-img';
   const inner = document.createElement('div');
+  inner.setAttribute('aria-hidden', 'true'); // repeats the cover image; no new information
   wrapper.appendChild(inner);
   bg(inner, articleImage(article));
   target.after(wrapper);
